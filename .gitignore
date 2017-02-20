@@ -1,0 +1,14 @@
+node_modules/
+www/build/
+platforms/
+plugins/
+*.swp
+.DS_Store
+Thumbs.db
+.publish
+
+config.ts
+*-config.js
+
+bower_components
+dev/src/bower_components/
