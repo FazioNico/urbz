@@ -4,7 +4,7 @@
 // @Last modified by:   webmaster-fazio
 // @Last modified time: 21-02-2017
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar,*::-webkit-scrollbar {
     width:0;
     background-color:transparent;
 }
@@ -12,11 +12,23 @@ body::-webkit-scrollbar{
 
 header{
   position: fixed;
+  top: 0;
   height: 100px;
-  width: 100%;
-  background-color: white;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  z-index: 1;
+  width: calc(100%);
+  z-index: 2;
+
+  .brand-logo {
+    position: absolute;
+    left: 100px;
+    top: 8px;
+    height: 100px;
+    width: 70px;
+    background-image: url(../img/logo_dark.png);
+    background-image: url(../img/logo_dark.svg);
+    background-repeat: no-repeat;
+    background-size: 70px auto;
+    background-position: center;
+  }
 
   /* Bof-  Button Menu Primary */
   .primary-nav-trigger {
@@ -68,9 +80,6 @@ header{
   }
   .primary-nav-trigger .menu-icon.show {
     background-color: #1C2229;
-    -webkit-box-shadow: 1px 1px 0px 0px rgba(255, 255, 255, 0.2);
-    -moz-box-shadow: 1px 1px 0px 0px rgba(255, 255, 255, 0.2);
-    box-shadow: 1px 1px 0px 0px rgba(255, 255, 255, 0.2);
   }
   .primary-nav-trigger .menu-icon.show::before, .primary-nav-trigger .menu-icon.show:after {
       background-color: #1C2229;
@@ -79,19 +88,90 @@ header{
       box-shadow: none;
   }
   /* Eof-  Button Menu Primary */
-}
-.header-front {
 
+  .page-title {
+    position: absolute;
+    top: 50%;
+    margin: 0;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 210px;
+    font-size: 22px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+  }
+}
+header.show {
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+
+  .page-title {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+header.side-panel-is-open {
+    width: calc(100% - 280px);
+}
+header.menu-is-open {
+    background-color: #1C2229;
+    box-shadow: initial;
+    transition: 10ms ease;
+
+    .brand-logo {
+      position: absolute;
+      left: 100px;
+      top: 8px;
+      height: 100px;
+      width: 70px;
+      background-image: url(../img/logo_white.png);
+      background-image: url(../img/logo_white.svg);
+      background-repeat: no-repeat;
+      background-size: 70px auto;
+      background-position: center;
+    }
+
+    .primary-nav-trigger .menu-icon, .primary-nav-trigger .menu-icon::before, .primary-nav-trigger .menu-icon:after{
+      background: #fff;
+    }
+    .primary-nav-trigger .menu-icon.active {
+      background: transparent;
+
+    }
+    .primary-nav-trigger .menu-icon.active::before {
+      top: -0px;
+      transform: rotate3d(0,0,1,135deg);
+    }
+    .primary-nav-trigger .menu-icon.active::after {
+      top: 0px;
+      transform: rotate3d(0,0,1,-135deg);
+    }
+
+    .page-title {
+      opacity: 0;
+      visibility: hidden;
+    }
 }
 
-.brand-logo {
-  position: absolute;
-  left: 100px;
-  top: 8px;
-  height: 100px;
-  width: 70px;
-  background-image: url(../img/logo_dark.png);
-  background-repeat: no-repeat;
-  background-size: 70px auto;
-  background-position: center;
+@media screen and (min-width: 768px) {
+  header {
+    width: calc(100% - 60px);
+  }
+}
+
+// removing window default scrollbar
+@media screen and (min-width: 601px) {
+  body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: calc(100% + 15px);
+    padding-right: 15px;
+  }
 }

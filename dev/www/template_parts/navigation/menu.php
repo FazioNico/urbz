@@ -3,7 +3,10 @@
 # @Date:   20-02-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 20-02-2017
+# @Last modified time: 22-02-2017
+# @===================================
+#
+# @Templates SCSS file -> ./dev/src/sass/navigation/menu.scss
 ?>
 
 <!-- BEGIN OUTPUT from 'themes/urbz/templates/menu.html.twig' -->
@@ -14,9 +17,9 @@
 <li class="sub-level">
   <div class="sub-level-title">
     Topics
-    <span class="arrow-toggle"><span class="sp-1"></span><span class="sp-2"></span></span>
+    <span class="arrow-toggle"><i class="material-icons">keyboard_arrow_down</i></span>
   </div>
-  <!-- <div class="sub-level-container">
+  <div class="sub-level-container">
       <a href="/topics/urbz-art-and-more" class="topic" data-drupal-link-system-path="taxonomy/term/14">#urbz_Art_and_more</a>
       <a href="/topics/urbz-ciculatorylives" class="topic" data-drupal-link-system-path="taxonomy/term/180">#urbz_ciculatorylives</a>
       <a href="/topics/urbz-construction" class="topic" data-drupal-link-system-path="taxonomy/term/15">#urbz_construction</a>
@@ -35,9 +38,7 @@
       <a href="/topics/urbz-publications" class="topic" data-drupal-link-system-path="taxonomy/term/28">#urbz_publications</a>
       <a href="/topics/urbz-workshops" class="topic" data-drupal-link-system-path="taxonomy/term/29">#urbz_workshops</a>
       <a href="/topics/urbz" class="topic" data-drupal-link-system-path="taxonomy/term/188">urbz</a>
-  </div> -->
+  </div>
 </li>
 <li><a href="/taxonomy/term/13" data-drupal-link-system-path="taxonomy/term/13">Workshops</a></li>
 <li><a href="/about" data-drupal-link-system-path="node/8">About</a></li>
-
-<!-- END OUTPUT from 'themes/urbz/templates/menu.html.twig' -->

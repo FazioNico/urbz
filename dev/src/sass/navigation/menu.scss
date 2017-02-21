@@ -3,4 +3,34 @@
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
 // @Last modified time: 21-02-2017
+nav {
 
+  ul {
+    text-align: center;
+    background-color: #1C2229;
+
+    li {
+      float: none;
+
+      a {
+        display: inline-block;
+        padding: 6px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 20px;
+      }
+      a:hover {
+          color: #38556E;
+          background-color: transparent;
+      }
+    }
+    li.active {
+      background-color: transparent;
+    }
+  }
+
+
+  .rotate {
+    transform: rotateX(180deg);
+  }
+}
