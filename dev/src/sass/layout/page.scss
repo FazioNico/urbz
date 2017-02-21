@@ -1,0 +1,97 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   20-02-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 21-02-2017
+
+body::-webkit-scrollbar{
+    width:0;
+    background-color:transparent;
+}
+// TODO add jQuery polify for ::-webkit-scrollbar
+
+header{
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+
+  /* Bof-  Button Menu Primary */
+  .primary-nav-trigger {
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 20px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+  }
+  .primary-nav-trigger .menu-icon {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 32px;
+    height: 4px;
+    background-color: #1C2229;
+  }
+  .primary-nav-trigger .menu-icon::before, .primary-nav-trigger .menu-icon:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background-color: #1C2229;
+    -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
+    -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
+    transition: transform .3s, top .3s, background-color 0s;
+  }
+  .primary-nav-trigger .menu-icon::before {
+    top: -10px;
+  }
+  .primary-nav-trigger .menu-icon::after {
+    top: 10px;
+  }
+  .primary-nav-trigger .menu-icon.show {
+    background-color: #1C2229;
+    -webkit-box-shadow: 1px 1px 0px 0px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: 1px 1px 0px 0px rgba(255, 255, 255, 0.2);
+    box-shadow: 1px 1px 0px 0px rgba(255, 255, 255, 0.2);
+  }
+  .primary-nav-trigger .menu-icon.show::before, .primary-nav-trigger .menu-icon.show:after {
+      background-color: #1C2229;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+  }
+  /* Eof-  Button Menu Primary */
+}
+.header-front {
+
+}
+
+.brand-logo {
+  position: absolute;
+  left: 100px;
+  top: 8px;
+  height: 100px;
+  width: 70px;
+  background-image: url(../img/logo_dark.png);
+  background-repeat: no-repeat;
+  background-size: 70px auto;
+  background-position: center;
+}

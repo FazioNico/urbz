@@ -3,7 +3,7 @@
 * @Date:   15-09-2016
 * @Email:  contact@nicolasfazio.ch
 * @Last modified by:   webmaster-fazio
-* @Last modified time: 20-02-2017
+* @Last modified time: 21-02-2017
 */
 
 // importer les modules NPM
@@ -28,6 +28,7 @@ var rename            = require("gulp-rename");
 var sass              = require('gulp-sass');
 var autoprefixer      = require('gulp-autoprefixer');
 var useref            = require('gulp-useref');
+var gutil = require('gulp-util');
 
 // Config of project folders
 var config = {
@@ -35,6 +36,7 @@ var config = {
     css       : ['dev/src/bower_components/materialize/dist/css/materialize.min.css', 'dev/src/css/*.css'],
     fonts     : ['dev/src/bower_components/materialize/dist/fonts/**/*'],
     jsDep     : ['dev/src/js/*.min.js'],
+    img       : ['dev/src/img/**/*'],
      sassPath  : ['dev/src/sass'],
      bowerDir  : 'dev/src/bower_components' ,
     desDir    : './dist' /* répértoire de destination (prod) */
@@ -50,7 +52,8 @@ gulp.task("run",[
   'build-js',
   'copy-css',
   'copy-php',
-  'copy-fonts'
+  'copy-fonts',
+  'copy-img'
 ]);
 gulp.task('default', ['run'], function() {
     gulp.start('browser-sync', 'watch');
@@ -75,6 +78,7 @@ gulp.task('bowerDependencies', function() {
 gulp.task('sass', function () {
     return gulp.src(config.sassPath+'/*.scss')
       .pipe(sass())
+      .on('error', handleError)
       .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
       .pipe(cssmin())
       .pipe(gulp.dest('dev/src/css/'))
@@ -86,9 +90,11 @@ gulp.task("build-js", function(){
     return browserify("dev/app/app.js",{
         debug: true
     })
+    .on('error', handleError)
     .transform(babelify.configure({
         presets : ["es2015"]
     }))
+    .on('error', handleError)
     .bundle()
     .pipe(source('app.js'))
     .pipe(buffer())
@@ -135,6 +141,12 @@ gulp.task("copy-js-dep", function(){
         .pipe(gulp.dest(config.desDir+'/js'))
 });
 
+// Task to copy IMG
+gulp.task("copy-img", function(){
+    return gulp.src(config.img)
+        .pipe(gulp.dest(config.desDir+'/img'))
+});
+
 // Tash to push ./dist folder on Github gh-pages
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
@@ -158,10 +170,18 @@ gulp.task('browser-sync', function() {
     notify: true
     });
 });
+
+function handleError(err) {
+  console.log(err.toString());
+  browserSync.notify(err.message, 3001); // Display error in the browser
+  gutil.log(gutil.colors.red('Error (' + err.plugin + '): ' + err.message));
+  this.emit('end');
+}
+
 // Task to watch wich file is changing and load the right task
 gulp.task('watch', function() {
   gulp.watch('./dev/app/**/*.js', ['build-js']);     // watch js file changes
   gulp.watch('./dev/www/**/*.php', ['copy-php']);      // watch all PHP template file changes
-  gulp.watch('./dev/src/css/*.css', ['copy-css']);   
+  gulp.watch('./dev/src/css/*.css', ['copy-css']); 
   gulp.watch('./dev/src/sass/**/*.scss', ['sass']); 
 })
