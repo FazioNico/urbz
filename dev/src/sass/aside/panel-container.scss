@@ -1,0 +1,33 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   21-02-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 21-02-2017
+
+
+aside {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  aside {
+    display: block;
+  }
+  .side-panel {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 60px;
+      height: 100%;
+      background: #1C2229;
+      overflow-y: auto;
+      -webkit-transition: width 0.3s ease-in-out;
+      -moz-transition: width 0.3s ease-in-out;
+      transition: width 0.3s ease-in-out;
+  }
+  .side-panel .panel-header {
+      position: fixed;
+      height: 100px;
+      width: 280px;
+      background: #1C2229;
+  }
+}

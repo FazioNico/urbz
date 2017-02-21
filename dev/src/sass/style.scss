@@ -2,4 +2,17 @@
 // @Date:   20-02-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 20-02-2017
+// @Last modified time: 22-02-2017
+
+@import "./layout/page.scss";
+@import "./navigation/main-nav.scss";
+@import "./navigation/menu.scss";
+@import "./aside/panel-container.scss";
+@import "./elements/form/header-search.scss";
+
+/* Animation on resize */
+body{
+  header, nav, nav a, .page-title , .sub-level, .sub-level-title, .sub-level-container, .arrow-toggle{
+    transition: all 250ms ease-in-out;
+  }
+}
