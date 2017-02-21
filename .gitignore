@@ -12,3 +12,4 @@ config.ts
 
 bower_components
 dev/src/bower_components/
+*.mokup.*
