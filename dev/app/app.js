@@ -3,7 +3,7 @@
 * @Date:   20-02-2017
 * @Email:  contact@nicolasfazio.ch
 * @Last modified by:   webmaster-fazio
-* @Last modified time: 21-02-2017
+* @Last modified time: 22-02-2017
 */
 console.log('test');
 
@@ -24,31 +24,37 @@ function toggleSubMenu(){
 // Effect on Primary Menu Nav on Window Scroll
 function navShowOnScroll(){
   window.addEventListener('scroll', _=>{
-			let distanceY = window.pageYOffset,
-					breackPoint = 100,
-					header = document.querySelector("header"),
-					logo = document.querySelector(".brand-logo"),
-					menuTrigger = document.querySelector(".menu-icon"),
-					panelHeader = document.querySelector(".panel-header")
+  	let distanceY = window.pageYOffset,
+  			breackPoint = 100,
+  			header = document.querySelector("header"),
+  			logo = document.querySelector(".brand-logo"),
+  			menuTrigger = document.querySelector(".menu-icon"),
+  			panelHeader = document.querySelector(".panel-header")
 
-			if (distanceY > breackPoint) {
-					header.classList.add('show')
-					menuTrigger.classList.add('show')
-					//pageTitle.classList.add('show')
-					logo.classList.add('show')
-					panelHeader.classList.add('show')
-			} else {
-					if (header.classList.contains('show')=== true) {
-							header.classList.remove('show')
-							menuTrigger.classList.remove('show')
-							logo.classList.remove('show')
-							panelHeader.classList.remove('show')
-
-					}
+  	if (distanceY > breackPoint) {
+			header.classList.add('show')
+			menuTrigger.classList.add('show')
+			//pageTitle.classList.add('show')
+			logo.classList.add('show')
+			panelHeader.classList.add('show')
+  	} else {
+			if (header.classList.contains('show')=== true) {
+				header.classList.remove('show')
+				menuTrigger.classList.remove('show')
+				logo.classList.remove('show')
+				panelHeader.classList.remove('show')
+			}
 			}
 	});
 }
 
+// load DOM function Effects
 toggleMenu()
 toggleSubMenu()
 navShowOnScroll()
+
+// enable all Materialize plugins
+$(document).ready(function() {
+  // dropdown input select form
+  $('select').material_select();
+});
