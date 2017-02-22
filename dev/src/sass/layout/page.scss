@@ -2,7 +2,7 @@
 // @Date:   20-02-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 21-02-2017
+// @Last modified time: 22-02-2017
 
 body::-webkit-scrollbar,*::-webkit-scrollbar {
     width:0;
@@ -23,8 +23,8 @@ header{
     top: 8px;
     height: 100px;
     width: 70px;
-    background-image: url(../img/logo_dark.png);
-    background-image: url(../img/logo_dark.svg);
+    background-image: url(../img/logo_white.png);
+    background-image: url(../img/logo_white.svg);
     background-repeat: no-repeat;
     background-size: 70px auto;
     background-position: center;
@@ -59,7 +59,7 @@ header{
     transform: translateX(-50%) translateY(-50%);
     width: 32px;
     height: 4px;
-    background-color: #1C2229;
+    background-color: #fff;
   }
   .primary-nav-trigger .menu-icon::before, .primary-nav-trigger .menu-icon:after {
     content: '';
@@ -67,7 +67,7 @@ header{
     height: 100%;
     position: absolute;
     right: 0;
-    background-color: #1C2229;
+    background-color: #fff;
     -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
     -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
     transition: transform .3s, top .3s, background-color 0s;
@@ -111,6 +111,11 @@ header{
 header.show {
   background-color: white;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+
+  .brand-logo {
+    background-image: url(../img/logo_dark.png);
+    background-image: url(../img/logo_dark.svg);
+  }
 
   .page-title {
     opacity: 1;
