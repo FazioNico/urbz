@@ -60,6 +60,7 @@ header{
     width: 32px;
     height: 4px;
     background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,.3);
   }
   .primary-nav-trigger .menu-icon::before, .primary-nav-trigger .menu-icon:after {
     content: '';
@@ -68,6 +69,7 @@ header{
     position: absolute;
     right: 0;
     background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,.3);
     -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
     -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
     transition: transform .3s, top .3s, background-color 0s;
