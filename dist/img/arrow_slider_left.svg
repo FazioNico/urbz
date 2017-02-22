@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow_slider_left</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow_slider_left" fill="#FFFFFF">
+            <g id="right" transform="translate(23.000000, 23.000000) rotate(90.000000) translate(-23.000000, -23.000000) translate(5.000000, 5.000000)">
+                <path d="M18,33.6 C26.6156421,33.6 33.6,26.6156421 33.6,18 C33.6,9.3843579 26.6156421,2.4 18,2.4 C9.3843579,2.4 2.4,9.3843579 2.4,18 C2.4,26.6156421 9.3843579,33.6 18,33.6 Z M18,36 C8.0588745,36 0,27.9411255 0,18 C0,8.0588745 8.0588745,0 18,0 C27.9411255,0 36,8.0588745 36,18 C36,27.9411255 27.9411255,36 18,36 Z" id="Oval"></path>
+                <polygon id="Path" points="21.7770962 15.7148152 25.1712087 15.7148152 17.6932967 23.1927272 10.2153846 15.7148152 13.6094972 15.7148152 17.6932967 19.7986147"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
