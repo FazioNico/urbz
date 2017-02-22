@@ -3,15 +3,15 @@
 # @Date:   22-02-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 22-02-2017
+# @Last modified time: 23-02-2017
 
 # Templates SCSS file -> dev/src/sass/elements/blocks/wokshop.scss
 ?>
 <div id="workshop" class="row">
   <div class="col s12 valign-wrapper">
     <div class="valign">
-      
-      <h1>Workshops</h1>
+
+      <h2>Workshops</h2>
 
       <div class="input-field col s12">
         <select>
