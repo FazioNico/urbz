@@ -1,0 +1,63 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   22-02-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 22-02-2017
+
+#workshop {
+  background: #CF587F;
+  color: #fff;
+  margin: 0px -11px;
+
+  .valign {
+    width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+  .select-wrapper  {
+    margin:auto;
+    margin: auto;
+    max-width: 140px;
+  }
+  .select-dropdown {
+      text-align: center;
+  }
+  .select-wrapper input.select-dropdown {
+    border: solid 1px #1C2229;
+    background: #fff;
+    color:#1C2229;
+    text-transform: uppercase;
+  }
+  ul.dropdown-content.select-dropdown li span {
+    color:#1C2229;
+    text-transform: uppercase;
+  }
+  span.caret {
+     color:#1C2229;
+     right:8px;
+     top:1px;
+     z-index: 1;
+   }
+
+  @media screen and (max-width: 600px) {
+    .valign-wrapper {
+      max-height: 320px;
+    }
+  }
+  @media screen and (max-width: 901px) {
+    .valign-wrapper {
+      height: 480px;
+    }
+  }
+  @media screen and (min-width:902px) {
+    .valign-wrapper {
+      height: 580px;
+    }
+  }
+
+}

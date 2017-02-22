@@ -4,15 +4,20 @@
 // @Last modified by:   webmaster-fazio
 // @Last modified time: 22-02-2017
 
+// Using Materialize CSS Framework: ./dev/src/bower_components/materialize/dist/css/materialize.css
+
 @import "./layout/page.scss";
 @import "./navigation/main-nav.scss";
 @import "./navigation/menu.scss";
 @import "./aside/panel-container.scss";
 @import "./elements/form/header-search.scss";
 
+@import "./elements/blocks/wokshop.scss";
+
 /* Animation on resize */
 body{
-  header, nav, nav a, .page-title , .sub-level, .sub-level-title, .sub-level-container, .arrow-toggle{
+  header, nav, nav a, .page-title , .sub-level, .sub-level-title, .sub-level-container, .arrow-toggle,
+  .col {
     transition: all 250ms ease-in-out;
   }
 }
