@@ -3,7 +3,7 @@
 * @Date:   20-02-2017
 * @Email:  contact@nicolasfazio.ch
 * @Last modified by:   webmaster-fazio
-* @Last modified time: 22-02-2017
+* @Last modified time: 24-02-2017
 */
 console.log('test');
 
@@ -11,7 +11,7 @@ console.log('test');
 function toggleMenu(){
   document.getElementsByClassName('primary-nav-trigger')[0].addEventListener('click',_=>{
     document.querySelector('header').classList.toggle('menu-is-open')
-    document.querySelector('nav').classList.toggle('show')
+    document.querySelector('nav.primary-nav').classList.toggle('show')
     document.querySelector('.menu-icon').classList.toggle('active')
   })
 }
