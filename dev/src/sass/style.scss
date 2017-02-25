@@ -2,7 +2,7 @@
 // @Date:   20-02-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 22-02-2017
+// @Last modified time: 25-02-2017
 
 // Using Materialize CSS Framework: ./dev/src/bower_components/materialize/dist/css/materialize.css
 
@@ -13,11 +13,13 @@
 @import "./elements/form/header-search.scss";
 
 @import "./elements/blocks/wokshop.scss";
+@import "./elements/blocks/small-article-exhibition.scss";
+@import "./elements/picture/card-image.scss";
 
 /* Animation on resize */
 body{
   header, nav, nav a, .page-title , .sub-level, .sub-level-title, .sub-level-container, .arrow-toggle,
-  .col {
+  .col, img {
     transition: all 250ms ease-in-out;
   }
 }

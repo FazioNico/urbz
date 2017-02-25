@@ -2,7 +2,7 @@
 // @Date:   20-02-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 22-02-2017
+// @Last modified time: 25-02-2017
 
 body::-webkit-scrollbar,*::-webkit-scrollbar {
     width:0;
@@ -10,7 +10,7 @@ body::-webkit-scrollbar,*::-webkit-scrollbar {
 }
 // TODO add jQuery polify for ::-webkit-scrollbar
 
-header{
+body > header{
   position: fixed;
   top: 0;
   height: 100px;
@@ -110,7 +110,7 @@ header{
     transition: opacity 0.2s ease-in-out;
   }
 }
-header.show {
+body > header.show {
   background-color: white;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 
@@ -124,10 +124,10 @@ header.show {
     visibility: visible;
   }
 }
-header.side-panel-is-open {
+body > header.side-panel-is-open {
     width: calc(100% - 280px);
 }
-header.menu-is-open {
+body > header.menu-is-open {
     background-color: #1C2229;
     box-shadow: initial;
     transition: 10ms ease;
@@ -168,7 +168,7 @@ header.menu-is-open {
 }
 
 @media screen and (min-width: 768px) {
-  header {
+  body > header {
     width: calc(100% - 60px);
   }
 }
@@ -180,5 +180,8 @@ header.menu-is-open {
     overflow-x: hidden;
     width: calc(100% + 15px);
     padding-right: 15px;
+  }
+  .main-content.row > section.col {
+      padding: 0 1rem;
   }
 }
