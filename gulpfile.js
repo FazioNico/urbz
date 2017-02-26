@@ -3,7 +3,7 @@
 * @Date:   15-09-2016
 * @Email:  contact@nicolasfazio.ch
 * @Last modified by:   webmaster-fazio
-* @Last modified time: 21-02-2017
+* @Last modified time: 26-02-2017
 */
 
 // importer les modules NPM
@@ -34,7 +34,7 @@ var gutil = require('gulp-util');
 var config = {
     pages     : ['dev/www/**/**/*.php'], 
     css       : ['dev/src/bower_components/materialize/dist/css/materialize.min.css', 'dev/src/css/*.css'],
-    fonts     : ['dev/src/bower_components/materialize/dist/fonts/**/*'],
+    fonts     : ['dev/src/bower_components/materialize/dist/fonts/**/*', 'dev/src/fonts/**/*'],
     jsDep     : ['dev/src/js/*.min.js'],
     img       : ['dev/src/img/**/*'],
      sassPath  : ['dev/src/sass'],

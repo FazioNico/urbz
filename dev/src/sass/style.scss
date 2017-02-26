@@ -20,8 +20,44 @@
 @import "./elements/picture/card-image.scss";
 @import "./elements/time.scss";
 
+/* Fonts Face */
+@font-face {
+    font-family: 'karla-bold';
+    src: url('../fonts/karla-wf/karla-bold-webfont.woff2') format('woff2'),
+         url('../fonts/karla-wf/karla-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'karla-bold-italic';
+    src: url('../fonts/karla-wf/karla-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/karla-wf/karla-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'karla-italic';
+    src: url('../fonts/karla-wf/karla-italic-webfont.woff2') format('woff2'),
+         url('../fonts/karla-wf/karla-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'karla-regular';
+    src: url('../fonts/karla-wf/karla-regular-webfont.woff2') format('woff2'),
+         url('../fonts/karla-wf/karla-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 /* Animation on resize */
 body{
+  font-family: "karla-regular", "Roboto", sans-serif;
+  font-size: 18px;
   background: #F6F8F9;
 
   header, nav, nav a, .page-title , .sub-level, .sub-level-title, .sub-level-container, .arrow-toggle,
