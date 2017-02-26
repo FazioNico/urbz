@@ -1,0 +1,20 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   25-02-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 26-02-2017
+
+time.datetime {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #989898;
+    margin: 15px 0px 5px;
+}
+.s12 time.datetime {
+    text-align: center;
+}
+.s6 time.datetime {
+    text-align: left;
+}

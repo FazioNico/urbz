@@ -1,0 +1,27 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   25-02-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 26-02-2017
+
+.field.field--name-field-authors{
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  padding: 3px 0px 0px 0;
+  height: 50px;
+  margin: 0 20px 4px 0;
+  border-bottom: 4px solid #727C9B;
+  min-width: 99px;
+
+  .field__item {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .field__item img {
+    max-height: 48px;
+    max-width: 48px;
+    margin: 0px -5px;
+  }
+}
