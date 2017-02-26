@@ -1,0 +1,213 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+
+/*
+  add a class in the body with the type of page
+*/
+function urbz_preprocess_html(&$variables) {
+  $type = false;
+  $voc_type = false;
+  $term = false;
+  $parameters = \Drupal::routeMatch()->getParameters();
+  if($parameters->has('node')) {
+    $type = $parameters->get('node')->getType();
+  } elseif($parameters->has('user')) {
+      $type = 'user';
+  } elseif($parameters->has('view_id')) {
+    if($parameters->get('view_id') == 'taxonomy_term') {
+      $taxo = $parameters->get('taxonomy_term');
+      $voc_type = 'vocabulary-'.$taxo->getVocabularyId();
+      $term = 'term-'.$taxo->getName();
+    }
+    $type = $parameters->get('view_id').'-'.$parameters->get('display_id');
+  } elseif($parameters->has('search_api_page_name')) {
+    $type = $parameters->get('search_api_page_name');
+  }
+  if($type) {
+    $variables['attributes']['class'][] = $type;
+  }
+  if($voc_type) {
+    $variables['attributes']['class'][] = $voc_type;
+  }
+  if($term) {
+    $variables['attributes']['class'][] = Html::cleanCssIdentifier($term);
+  }
+}
+
+/**
+ * Implements TEMPLATE_preprocess_HOOK().
+ * add the list of articles related to user to the user detail page
+ */
+function urbz_preprocess_user(&$variables) {
+  if(isset($variables['elements']['#view_mode']) && $variables['elements']['#view_mode'] == 'full') {
+    $uid = $variables['user']->id();
+    $variables['content']['related_articles'] = views_embed_view('articles_from_author', 'embed_1',$uid);
+    $variables['content']['related_articles']['#weight'] = 100;
+  }
+}
+
+
+/**
+ * Implements TEMPLATE_preprocess_HOOK().
+ * - add the list of articles related to current article in article detail page
+ * - add article of this collection
+ * - add h1 to title
+ * - display background color if no image provided and background color provided
+ * - display article overview with the selected display mode
+ */
+function urbz_preprocess_node(&$variables) {
+  switch($variables['elements']['#view_mode']) {
+    case 'full':
+      $type = $variables['elements']['#node']->getType();
+      if($variables['page'] && ($type == 'article' || $type == 'project')) {
+        $nid = $variables['elements']['#node']->id();
+        $variables['content']['related_articles'] = views_embed_view('articles_from_article_buy_tag', 'embed_1',$nid,$nid);
+        $variables['content']['related_articles']['#weight'] = 100;
+        if($type == 'project') {
+          $variables['content']['project_articles'] = views_embed_view('articles_of_this_project', 'embed_1',$nid,$nid);
+          $variables['content']['project_articles']['#weight'] = 4;
+        }
+      }
+      if(isset($variables['content']['title_clone']['title_clone'])) {
+        $title = reset($variables['content']['title_clone']['title_clone']);
+        $title = $title['title']['#items']->getValue();
+        $title = reset($title);
+        $value = $title['value']; // todo better
+        $variables['content']['title_clone'] = array('#markup' => '<h1>'.$value.'</h1>');
+      }
+    break;
+    default:
+      $type = $variables['elements']['#node']->getType();
+      if($type == 'pdf_article') {
+        $variables['link_attributes'] = new Drupal\Core\Template\Attribute(array('target' => '_blank'));
+      }
+  }
+  if(isset($variables['content']['field_background_color'])) {
+    if(isset($variables['content']['field_overview_image'])) {
+      if(count($variables['content']['field_overview_image']) < 3 &&
+         !empty($variables['content']['field_background_color'][0]['#markup'])) {
+        $variables['attributes']['style'] = 'background-color:'.$variables['content']['field_background_color'][0]['#markup'];
+        $variables['attributes']['class'] = 'colored-tile';
+        unset($variables['content']['field_overview_image']);
+        unset($variables['content']['field_date_of_creation']);
+        unset($variables['content']['field_description_article']);
+        unset($variables['content']['field_authors']);
+      }
+      unset($variables['content']['field_background_color']);
+    }
+  }
+}
+
+/*
+ * Implements TEMPLATE_preprocess_HOOK().
+ * - display only one picture of header imùage if it is not full page
+ * - display author picture if the checkbox is checked
+ */
+function urbz_preprocess_field(&$variables) {
+  switch($variables['field_name']) {
+    case 'field_header_image' :
+      if($variables['element']['#view_mode'] != 'full' && $variables['element']['#bundle'] == 'project') {
+        $variables['items'] = array($variables['items'][0]);
+      }
+    break;
+    case 'field_2_col_icon':
+    case 'field_add_members_icon':
+      $bool = $variables['element']['#items']->first()->getValue()['value']; //  todo better
+      if($bool) {
+        $users = false;
+        $itemDate = false;
+        $node = \Drupal::routeMatch()->getParameter('node');
+        if($node) {
+          if($node->hasField('field_authors')) {
+            $field = $node->get('field_authors');
+            foreach($field as $item) {
+              $users[] = \Drupal\user\Entity\User::load($item->target_id); //$item->entity ?
+            }
+          }
+          if($node->hasField('field_date_of_creation')) {
+            $itemDate = $node->field_date_of_creation->view(array('label'=>'hidden','type'=>'datetime_default','settings'=>array('format_type'=>'medium')));
+          }
+        } else {
+          $users[0] = \Drupal::routeMatch()->getParameter('user');
+        }
+        $count = 0;
+        if($users) {
+          foreach($users as $user) {
+            if(is_object($user) && is_object($user->field_user_picture)) {
+              $field_img = $user->field_user_picture->view(array('label'=>'hidden','type'=>'image','settings'=>array('image_style'=>'user_picture','image_link'=>'content')));
+              $variables['element'][$count] = $field_img;
+              $variables['items'][$count]['content'] = $variables['element'][$count];
+              $count++;
+            }
+            if($count >= 3) break;
+          }
+        }
+        if($itemDate) {
+          $variables['element'][$count] = $itemDate;
+          $variables['items'][$count]['content'] = $variables['element'][$count];
+        }
+      } else {
+        $variables['items'][0]['content'] = ''; // si off on affiche rien
+      }
+    break;
+  }
+}
+
+/*
+ * Implements TEMPLATE_preprocess_HOOK().
+ * mask label for contact form
+ */
+function urbz_preprocess_form_element(&$variables) {
+  switch($variables['type']) {
+    case 'textfield':
+    case 'textarea' :
+    case 'email':
+      $variables['label'] = null;
+
+  }
+}
+
+/*
+ * Implements TEMPLATE_preprocess_HOOK().
+ * add placeholder in contact form
+ */
+function urbz_preprocess_input(&$variables) {
+  switch($variables['element']['#type']) {
+    case 'textfield':
+    case 'email':
+      $label = (string)$variables['element']['#title'];
+      $variables['element']['#placeholder'] = $label;
+      $variables['attributes']['placeholder'] = $label;
+    break;
+  }
+}
+
+/**
+ * Implements TEMPLATE_preprocess_HOOK().
+ * add placeholder in contact form
+ **/
+function urbz_preprocess_textarea(&$variables) {
+  switch($variables['element']['#type']) {
+    case 'textarea':
+      $label = (string)$variables['element']['#title'];
+      $variables['element']['#placeholder'] = $label;
+      $variables['attributes']['placeholder'] = $label;
+    break;
+  }
+}
+
+/**
+ * Implements TEMPLATE_preprocess_HOOK().
+ * - remove unwanted block when vocabulary is not category
+ **/
+function urbz_preprocess_page(&$variables) {
+  $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
+  if(is_object($term)) {
+    $voc = $term->getVocabularyId();
+    if($voc == 'topic' || $voc == 'tags') {
+      unset($variables['page']['content_left']['pagetitle_2']);
+      unset($variables['page']['content_left']['exposedformtaxonomy_termpage_1']);
+    }
+  }
+}

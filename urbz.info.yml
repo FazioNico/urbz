@@ -1,0 +1,33 @@
+name: Urbz
+type: theme
+description: Drupal 8 theme for Urbz
+core: 8.x
+version: 8.x-1.0
+
+base theme: classy
+
+regions:
+  menu: 'Menu'
+  content_left: 'Left content'
+  content: 'Center content'
+
+libraries:
+ - urbz/global-styling
+ - urbz/global-js-footer
+
+
+ckeditor_stylesheets:
+  - dist/css/ckeditor.css
+
+libraries-override:
+  classy/base: false
+  system/base: false
+  classy/node: false
+  core/normalize: false
+  user/drupal.user: false
+  core/drupal.dropbutton: false
+  core/drupal.dialog: false
+  file/drupal.file: false
+  user/drupal.user.icons: false
+  views/views.module: false
+  blazy/column: false

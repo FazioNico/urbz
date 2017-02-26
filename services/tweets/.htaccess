@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteBase /themes/urbz/include/tweets/
+	
+    RewriteRule ^ request.php [L]
+
+</IfModule>

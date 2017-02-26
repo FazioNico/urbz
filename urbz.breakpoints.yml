@@ -1,0 +1,18 @@
+urbz.mobile:
+  label: mobile
+  mediaQuery: 'all and (max-width: 767px)'
+  weight: 0
+  multipliers:
+    - 1x
+urbz.narrow:
+  label: narrow
+  mediaQuery: 'all and (min-width: 768px) and (max-width: 1169px)'
+  weight: 1
+  multipliers:
+    - 1x
+urbz.wide:
+  label: wide
+  mediaQuery: 'all and (min-width: 1170px)'
+  weight: 2
+  multipliers:
+    - 1x

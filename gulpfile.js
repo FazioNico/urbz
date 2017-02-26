@@ -37,8 +37,8 @@ var config = {
     fonts     : ['dev/src/bower_components/materialize/dist/fonts/**/*', 'dev/src/fonts/**/*'],
     jsDep     : ['dev/src/js/*.min.js'],
     img       : ['dev/src/img/**/*'],
-     sassPath  : ['dev/src/sass'],
-     bowerDir  : 'dev/src/bower_components' ,
+   sassPath  : ['dev/src/sass'],
+   bowerDir  : 'dev/src/bower_components' ,
     desDir    : './dist' /* répértoire de destination (prod) */
 }
 var bowerDependencies = [
@@ -160,6 +160,7 @@ gulp.task('browser-sync', function() {
     var files = [
     './dist/js/app.js',
     './dist/css/style.css',
+    './dist/css/ckeditor.css',
     './dist/*.php'
     ];
     //initialize browsersync

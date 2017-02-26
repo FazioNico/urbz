@@ -7,15 +7,14 @@
 
 # Templates SCSS file -> gride system from materialize css. no customing
 ?>
-<section class="col m5">
 
-  <!-- Import Workshop Block -->
-  <?php require_once './template_parts/elements/blocks/workshop.php';?>
+<!-- Import Workshop Block -->
+<?php require_once './template_parts/elements/blocks/workshop.php';?>
 
-  <!-- Import Small Exhibition Block -->
-  <?php require './template_parts/elements/blocks/small-article-exhibition.php';?>
-  <?php require './template_parts/elements/blocks/small-article-exhibition.php';?>
-  <?php require './template_parts/elements/blocks/small-article-exhibition.php';?>
-  <?php require './template_parts/elements/blocks/small-article-exhibition.php';?>
+<!-- Import Small Exhibition Block -->
+<?php require './template_parts/elements/blocks/small-article-exhibition.php';?>
+<?php require './template_parts/elements/blocks/small-article-exhibition.php';?>
+<?php require './template_parts/elements/blocks/small-article-exhibition.php';?>
+<?php require './template_parts/elements/blocks/small-article-exhibition.php';?>
 
-</section>
+

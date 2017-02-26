@@ -1,0 +1,12 @@
+global-styling:
+  css:
+    theme:
+      http://fonts.googleapis.com/icon?family=Material+Icons: { type: external }
+      dist/css/style.css: {}
+
+global-js-footer:
+  js:
+    dist/js/bundle.min.js: {}
+    dist/js/tweeter_stream.js: {}
+    dist/js/app.js: {}
+
