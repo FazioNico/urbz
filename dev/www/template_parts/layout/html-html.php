@@ -7,12 +7,20 @@
 # @===================================
 #
 # @Templates SCSS file -> none
+
+if(isset($_GET['page'])) {
+  $title = $include_page = $_GET['page'];
+} else {
+  $include_page = "";
+  $title = "User-generated Cities";
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Urbz.net</title>
+  <title><?php echo $title ?> | Urbz.net</title>
   <!-- TODO: add META HEADER  with Drupal ... how it work? what we'got? -->
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -23,27 +31,11 @@
 <body>
   <!-- Import layout page block -->
   <?php
-
-    $include_page = $_SERVER['REQUEST_URI'];
-    //print_r($include_page);
-
-    if($include_page === '/'){
-      require_once './template_parts/layout/page.php';
-    }
-    else {
-      /*
-          page ready=>
-            /project.php
-      */
-      if(file_exists('./template_parts/layout'.$include_page)){
-        require_once './template_parts/layout'.$include_page;
-      }
-    }
-
+    require_once './template_parts/layout/page.php';
   ?>
-
   <!--Import JS-->
   <script src="./js/bundle.min.js" charset="utf-8"></script>
+  <script src="./js/tweeter_stream.js" charset="utf-8"></script>
   <script src="./js/app.js" charset="utf-8"></script>
 </body>
 </html>

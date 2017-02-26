@@ -9,6 +9,8 @@
 ?>
 
 
+  <div class="col s12">
+
 <article role="article" about="/articles/sao-paulo-calling" class="card large-article-post z-depth-0 node node--type-article node--view-mode-overview-small">
 
   <!-- BEGIN OUTPUT from 'core/themes/classy/templates/field/field.html.twig' -->
@@ -16,7 +18,7 @@
 
     <!-- THEME HOOK: 'responsive_image_formatter' -->
     <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/responsive-image-formatter.html.twig' -->
-      <a href="/articles/sao-paulo-calling">
+      <a href="?page=article">
 
         <!-- THEME HOOK: 'responsive_image' -->
         <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/responsive-image.html.twig' -->
@@ -41,7 +43,7 @@
 
 
   <h2>
-    <a href="/articles/sao-paulo-calling" rel="bookmark">
+    <a href="?page=article" rel="bookmark">
         <!-- BEGIN OUTPUT from 'core/themes/classy/templates/field/field--node--title.html.twig' -->
         <span class="field field--name-title field--type-string field--label-hidden">Sao Paulo Calling</span>
         <!-- END OUTPUT from 'core/themes/classy/templates/field/field--node--title.html.twig' -->
@@ -56,6 +58,8 @@
   </div>
   <!-- END OUTPUT from 'core/themes/classy/templates/field/field--text-with-summary.html.twig' -->
 
-  <?php require './template_parts/elements/blocks/authors.php';?>
+  <?php require './template_parts/elements/fields/authors.php';?>
 
 </article>
+
+  </div>

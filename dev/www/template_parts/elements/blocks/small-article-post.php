@@ -9,7 +9,7 @@
 ?>
 
 
-  <div class="col s12">
+  <div class="col m6">
 
 <article role="article" about="/articles/sao-paulo-calling" class="card large-article-post z-depth-0 node node--type-article node--view-mode-overview-small">
 
