@@ -3,7 +3,7 @@
 # @Date:   20-02-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 21-02-2017
+# @Last modified time: 26-02-2017
 # @===================================
 #
 # @Templates SCSS file -> none
@@ -22,7 +22,25 @@
 </head>
 <body>
   <!-- Import layout page block -->
-  <?php require_once './template_parts/layout/page.php';?>
+  <?php
+
+    $include_page = $_SERVER['REQUEST_URI'];
+    //print_r($include_page);
+
+    if($include_page === '/'){
+      require_once './template_parts/layout/page.php';
+    }
+    else {
+      /*
+          page ready=>
+            /project.php
+      */
+      if(file_exists('./template_parts/layout'.$include_page)){
+        require_once './template_parts/layout'.$include_page;
+      }
+    }
+
+  ?>
 
   <!--Import JS-->
   <script src="./js/bundle.min.js" charset="utf-8"></script>
