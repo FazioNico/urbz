@@ -21,13 +21,6 @@ ckeditor_stylesheets:
 
 libraries-override:
   classy/base: false
-  system/base: false
   classy/node: false
   core/normalize: false
-  user/drupal.user: false
-  core/drupal.dropbutton: false
-  core/drupal.dialog: false
-  file/drupal.file: false
-  user/drupal.user.icons: false
-  views/views.module: false
   blazy/column: false

@@ -80,16 +80,15 @@
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
-<article{{ attributes.addClass(classes) }}>
+{{ attach_library('classy/node') }}
+<div class="row">
+  <div class="col s12">
+    <article{{ attributes.addClass(classes) }}>
 
-  {{ title_prefix }}
-  {% if not page %}
-    <h2 {{ title_attributes }}>
-      <a href="{{ url }}" {{ link_attributes }} rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
+      <div{{ content_attributes.addClass('node__content') }}>
+        {{ content }}
+      </div>
 
-    {{ content }}
-
-</article>
+    </article>
+  </div>
+</div>

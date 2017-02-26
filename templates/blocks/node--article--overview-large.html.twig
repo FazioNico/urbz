@@ -81,10 +81,14 @@
   ]
 %}
 {{ attach_library('classy/node') }}
-<article{{ attributes.addClass(classes) }}>
+<div class="row">
+  <div class="col s12">
+    <article{{ attributes.addClass(classes) }}>
 
-  <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
+      <div{{ content_attributes.addClass('node__content') }}>
+        {{ content }}
+      </div>
+
+    </article>
   </div>
-
-</article>
+</div>
