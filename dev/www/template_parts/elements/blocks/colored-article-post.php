@@ -9,7 +9,7 @@
 ?>
 <article role="article" about="" class="card colored-article-post z-depth-0  colored-tile node node--type-article node--view-mode-overview-smal">
   <h2>
-    <a href="#" rel="bookmark">
+    <a href="?page=article" rel="bookmark">
         <!-- BEGIN OUTPUT from 'core/themes/classy/templates/field/field--node--title.html.twig' -->
         <span class="field field--name-title field--type-string field--label-hidden">
              Morbi interdum mollis sapien Sed ac risus Phasellus lacinia magna a ullamcorper laoreet

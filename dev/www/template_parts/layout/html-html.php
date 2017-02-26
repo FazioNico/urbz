@@ -23,17 +23,8 @@
 <body>
   <!-- Import layout page block -->
   <?php
-
-    $include_page = basename($_SERVER['REQUEST_URI']);
-    //print_r($include_page);
-    if(file_exists('./template_parts/layout'.$include_page)){
-      require_once './template_parts/layout'.$include_page;
-    } else {
-      require_once './template_parts/layout/page.php';
-    }
-
+    require_once './template_parts/layout/page.php';
   ?>
-
   <!--Import JS-->
   <script src="./js/bundle.min.js" charset="utf-8"></script>
   <script src="./js/tweeter_stream.js" charset="utf-8"></script>

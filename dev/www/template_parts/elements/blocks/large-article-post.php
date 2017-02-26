@@ -16,7 +16,7 @@
 
     <!-- THEME HOOK: 'responsive_image_formatter' -->
     <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/responsive-image-formatter.html.twig' -->
-      <a href="/articles/sao-paulo-calling">
+      <a href="?page=article">
 
         <!-- THEME HOOK: 'responsive_image' -->
         <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/responsive-image.html.twig' -->
@@ -41,7 +41,7 @@
 
 
   <h2>
-    <a href="/articles/sao-paulo-calling" rel="bookmark">
+    <a href="?page=article" rel="bookmark">
         <!-- BEGIN OUTPUT from 'core/themes/classy/templates/field/field--node--title.html.twig' -->
         <span class="field field--name-title field--type-string field--label-hidden">Sao Paulo Calling</span>
         <!-- END OUTPUT from 'core/themes/classy/templates/field/field--node--title.html.twig' -->

@@ -23,7 +23,7 @@
       <!-- THEME DEBUG -->
       <!-- THEME HOOK: 'image_formatter' -->
       <!-- BEGIN OUTPUT from 'core/themes/classy/templates/field/image-formatter.html.twig' -->
-      <a href="#">
+      <a href="?page=user">
 
         <!-- THEME DEBUG -->
         <!-- THEME HOOK: 'image_style' -->

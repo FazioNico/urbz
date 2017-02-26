@@ -13,12 +13,12 @@
     <article role="article" about="" class="card small-article-exhibition z-depth-0 node node--type-project node--view-mode-teaser">
 
       <header>
-        <a href="#">
+        <a href="?page=collection">
           <?php require './template_parts/elements/picture/img-srcset.php';?>
         </a>
 
         <h2 class="title">
-          <a href="#"  rel="bookmark">
+          <a href="?page=collection"  rel="bookmark">
             <span class="field field--name-title field--type-string field--label-hidden">
             Consequatur dolore impedit eveniet necessitatibus
             </span>
@@ -30,7 +30,7 @@
 
         <div class="field field--name-field-category field--type-entity-reference field--label-hidden field__items">
           <div class="field__item">
-            <a href="#" hreflang="en">
+            <a href="?page=collection-overview" hreflang="en">
               Projects
             </a>
           </div>
@@ -45,7 +45,7 @@
       </div><!-- Eof .card-content -->
 
       <div class="card-action">
-        <a href="#" class="grey-text text-lighten-1">more</a>
+        <a href="?page=collection" class="grey-text text-lighten-1">more</a>
       </div>
 
     </article>
