@@ -9,7 +9,6 @@
 ?>
 
 
-<div class="row">
   <div class="col s12">
 
 <article role="article" about="/articles/sao-paulo-calling" class="card large-article-post z-depth-0 node node--type-article node--view-mode-overview-small">
@@ -64,4 +63,3 @@
 </article>
 
   </div>
-</div>

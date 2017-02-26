@@ -7,7 +7,6 @@
 
 # Tempalte -> dev/src/sass/elements/blocks/colored-article-post.scss
 ?>
-<div class="row small-item">
   <div class="col m6">
     <article role="article" about="" class="card colored-article-post z-depth-0  colored-tile node node--type-article node--view-mode-overview-smal">
       <h2>
@@ -22,4 +21,3 @@
       </h2>
     </article>
   </div>
-</div>
