@@ -7,6 +7,15 @@
 # @===================================
 #
 # @Templates SCSS file -> ./dev/src/sass/layout/pages.scss
+
+if(isset($_GET['page'])) {
+  $title = $include_page = $_GET['page'];
+} else {
+  $include_page = "";
+    $title = "User-generated Cities";
+}
+//print_r($include_page);
+  
 ?>
 
 <header class="header-front">
@@ -14,111 +23,67 @@
     <span class="menu-text"></span><span class="menu-icon"></span>
   </div>
   <a href="http://future.urbz.net/" class="brand-logo"></a>
-  <h1 class="page-title hide-on-small-only">User-generated Cities</h1>
+  <h1 class="page-title hide-on-small-only"><?php echo $title ?></h1>
 </header>
 
 <!-- Navigation Menu Block -->
 <nav role="navigation" class="primary-nav" >
   <div class="nav-wrapper">
-      <?php require_once './template_parts/navigation/menu.php';?>
-      <?php require_once './template_parts/elements/form/header-search.php';?>
+      <?php require_once './template_parts/elements/blocks/menu.php';?>
+      <?php require_once './template_parts/elements/blocks/header-search.php';?>
   </div>
 </nav>
 
 <main class="main-content row">
 
 <?php
-
-  if(isset($_GET['page'])) {
-    $include_page = $_GET['page'];
-  } else {
-    $include_page = "";
-  }
-  //print_r($include_page);
   
   // selection du layout en fonction du type de page
   switch($include_page) {
     
-    // --------------------- collection overview
-    case 'collection_overview':
-?>
-      <!-- Main col Left Block -->
-      <section class="col m5">
-        <?php require_once './template_parts/elements/blocks/workshop.php';?>
-        <?php require './template_parts/elements/blocks/small-collection.php';?>
-        <?php require './template_parts/elements/blocks/small-collection.php';?>
-        <?php require './template_parts/elements/blocks/small-collection.php';?>
-        <?php require './template_parts/elements/blocks/small-collection.php';?>
-      </section>
-
-      <!-- Main col right Block -->
-      <section class="col m7">
-        <?php require_once './template_parts/layout/main-col-right.php';?>
-      </section>
-<?php
-    break;
-    
-    // --------------------- collection detail
+    //----------------------1 columns
+    // ------------------------------------- collection detail
+    // ------------------------------------- search result page, topics page, tags page
+    // ------------------------------------- about
+    // ------------------------------------- article detail
+    // ------------------------------------- user detail
+    // ------------------------------------- people
+    case 'people':
+    case 'user':
+    case 'article':
+    case 'about':
+    case 'search':
     case 'collection':
 ?>
       <!-- Main col Full Block (header)-->
-      <?php require_once './template_parts/layout/main-col-full.php';?>
       <div class="row">
-        <!-- Import Block: main-col-half-size -->
-        <?php //require './template_parts/layout/main-col-half-size.php';?>
-          <!-- Import Block: col-half-right -->
-        <?php //require './template_parts/layout/main-col-half-size.php';?>
+        <section class="col s12">
+          <!-- TODO -->
+        </section>
       </div>
       <div class="row">
-        <!-- Import Block: Articles of this project -->
-        <?php //require './template_parts/layout/main-col-half-size.php';?>
-        <!-- Import Block: Information -->
-        <?php //require './template_parts/layout/main-col-half-size.php';?>
+        <!-- TODO -->
+      </div>
+      <div class="row">
+        <!-- TODO -->
       </div>
 <?php
     break;
     
-    // --------------------- people
-    case 'people':
-?>
-      <!-- TODO -->
-<?php
-    break;
-    
-    // --------------------- user detail
-    case 'user':
-?>
-      <!-- TODO -->
-<?php
-    break;
-    
-    // --------------------- article detail
-    case 'article':
-?>
-      <!-- TODO -->
-<?php
-    break;
-    
-    // --------------------- about 
-    case 'about':
-?>
-      <!-- TODO -->
-<?php
-    break;
-    
-    // --------------------- search result page, topics page, tags page
-    case 'search':
-?>
-      <!-- TODO -->
-<?php
-    break;
-    
-    // --------------------- accueil
+    //----------------------2 columns
+    // ------------------------------------- accueil
+    // ------------------------------------- collection overview
     default:
 ?>
       <!-- Main col Left Block -->
       <section class="col m5">
-        <?php require_once './template_parts/elements/blocks/accueil-teaser.php';?>
+        <?php 
+          if($include_page == 'collection-overview') {
+            require_once './template_parts/elements/blocks/accueil-teaser.php';
+          } else {
+            require_once './template_parts/elements/blocks/workshop.php';
+          }
+        ?>
         <?php require './template_parts/elements/blocks/small-collection.php';?>
         <?php require './template_parts/elements/blocks/small-collection.php';?>
         <?php require './template_parts/elements/blocks/small-collection.php';?>
@@ -127,7 +92,12 @@
 
       <!-- Main col right Block -->
       <section class="col m7">
-        <?php require_once './template_parts/layout/main-col-right.php';?>
+        <?php require './template_parts/elements/blocks/large-article-post.php';?>
+        <?php require './template_parts/elements/blocks/small-article-post.php';?>
+        <?php require './template_parts/elements/blocks/small-article-post.php';?>
+        <?php require './template_parts/elements/blocks/medium-article-post.php';?>
+        <?php require './template_parts/elements/blocks/small-article-post.php';?>
+        <?php require './template_parts/elements/blocks/colored-article-post.php';?>
       </section>
 <?php
   }

@@ -9,6 +9,9 @@
 ?>
 
 
+<div class="row">
+  <div class="col s12">
+
 <article role="article" about="/articles/sao-paulo-calling" class="card large-article-post z-depth-0 node node--type-article node--view-mode-overview-small">
 
   <!-- BEGIN OUTPUT from 'core/themes/classy/templates/field/field.html.twig' -->
@@ -56,6 +59,9 @@
   </div>
   <!-- END OUTPUT from 'core/themes/classy/templates/field/field--text-with-summary.html.twig' -->
 
-  <?php require './template_parts/elements/blocks/authors.php';?>
+  <?php require './template_parts/elements/fields/authors.php';?>
 
 </article>
+
+  </div>
+</div>

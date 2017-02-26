@@ -7,12 +7,20 @@
 # @===================================
 #
 # @Templates SCSS file -> none
+
+if(isset($_GET['page'])) {
+  $title = $include_page = $_GET['page'];
+} else {
+  $include_page = "";
+  $title = "User-generated Cities";
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Urbz.net</title>
+  <title><?php echo $title ?> | Urbz.net</title>
   <!-- TODO: add META HEADER  with Drupal ... how it work? what we'got? -->
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
