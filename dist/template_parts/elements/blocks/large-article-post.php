@@ -49,7 +49,7 @@
   </h2>
 
   <!-- BEGIN OUTPUT from 'core/themes/classy/templates/field/field--text-with-summary.html.twig' -->
-  <div class="clearfix text-formatted field field--name-field-description-article field--type-text-with-summary field--label-hidden field__item">
+  <div class="content-large-card clearfix text-formatted field field--name-field-description-article field--type-text-with-summary field--label-hidden field__item">
     <p>
 				Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus...
 		</p>
