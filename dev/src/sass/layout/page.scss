@@ -2,7 +2,7 @@
 // @Date:   20-02-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 26-02-2017
+// @Last modified time: 27-02-2017
 
 body::-webkit-scrollbar,*::-webkit-scrollbar {
     width:0;
@@ -172,10 +172,13 @@ body > main.row {
   margin-right: 0px;
 }
 
-section.col.m7 > .row:first-of-type{
+section.col.m7 > .col:first-of-type{
   margin-top: 60px;
 }
-
+section.col.m7 > .col{
+  margin-top: 60px;
+  padding: 0 40px 0 30px;
+}
 @media screen and (min-width: 768px) {
   body > header {
     width: calc(100% - 60px);
