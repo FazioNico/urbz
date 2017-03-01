@@ -2,9 +2,9 @@
 // @Date:   24-02-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 26-02-2017
+// @Last modified time: 02-03-2017
 
-.card.small-article-exhibition {
+.card.small-article-exhibition, .google-map-block {
     margin-right: -10px;
     margin-bottom: 30px;
 
@@ -68,5 +68,96 @@
 @media screen and (max-width: 600px) {
   .card {
       margin-left: -10px;
+  }
+}
+
+// large full width (detail page)
+
+.card.full-article-exhibition {
+    margin: 0px -10px;
+    margin-bottom: 30px;
+
+    header {
+      position: relative;
+      overflow: hidden;
+      color: rgba(0,0,0,.87);
+    }
+    a {
+      color: rgba(0,0,0,.87);
+    }
+    .field.field--name-field-category {
+        position: absolute;
+        left: 5%;
+        top: 3.5%;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 4px 6px;
+        background: white;
+        display: none;
+    }
+
+    h1.title{
+      position: absolute;
+      width: calc(100% - 10%);
+      left: 5%;
+      bottom: 8%;
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 0px;
+      font-weight: 500;
+      color: #fff;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    .card-content {
+      border: 0px solid #DADADB;
+      border-bottom: none;
+      padding: 60px 24px 25px;
+      border-radius: 0px;
+
+    }
+
+    .card-action {
+        border-top: 0px solid rgba(160,160,160,.2);
+        border-bottom: 1px solid #DADADB;
+        border-left: 1px solid #DADADB;
+        border-right: 1px solid #DADADB;
+
+        a {
+            border-top: solid 1px #ccc;
+            padding-top: 15px;
+            padding-right: 50px;
+        }
+    }
+    .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating){
+      text-transform: lowercase;
+      font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .full-article-exhibition.card {
+
+  }
+}
+
+
+.google-map-block {
+  border-bottom: 1px solid #DADADB;
+  margin-right: 0px;
+
+  header {
+    background: #ccc;
+    color:#fff;
+  }
+
+  @media screen and (min-width: 601px) {
+    .card-content div{
+      width: 60%;
+    }
   }
 }
