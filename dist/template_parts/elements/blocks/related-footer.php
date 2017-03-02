@@ -7,7 +7,7 @@
 
 ?>
 
-  <div class="col m3 s2">
+  <div class="col l3 m6 s12">
     <article role="article" about="" class="card small-article-related-footer z-depth-0 node node--type-project node--view-mode-teaser">
 
       <header>
@@ -15,7 +15,7 @@
           <?php require './template_parts/elements/picture/img-srcset.php';?>
         </a>
 
-        <h2 class="title">
+        <h2 class="title truncate">
           <a href="?page=collection"  rel="bookmark">
             <span class="field field--name-title field--type-string field--label-hidden">
             Consequatur dolore impedit eveniet necessitatibus
