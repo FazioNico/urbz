@@ -3,7 +3,7 @@
 # @Date:   01-03-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 01-03-2017
+# @Last modified time: 02-03-2017
 
 ?>
 
@@ -14,7 +14,7 @@
       <header class="no-effect-img">
           <?php require './template_parts/elements/picture/img-srcset.php';?>
 
-        <h1 class="title">
+        <h1 class="title truncate">
             <span class="field field--name-title field--type-string field--label-hidden">
             Consequatur dolore impedit eveniet necessitatibus
             </span>

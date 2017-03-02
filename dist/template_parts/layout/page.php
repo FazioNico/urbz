@@ -129,6 +129,7 @@ if(isset($_GET['page'])) {
         <?php require './template_parts/elements/blocks/medium-article-post.php';?>
         <?php require './template_parts/elements/blocks/small-article-post.php';?>
         <?php require './template_parts/elements/blocks/colored-article-post.php';?>
+        <?php require './template_parts/elements/blocks/small-pdf-post.php';?>
       </div>
 <?php
   }

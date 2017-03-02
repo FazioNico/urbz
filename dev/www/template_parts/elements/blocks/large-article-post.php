@@ -3,7 +3,7 @@
 # @Date:   25-02-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 26-02-2017
+# @Last modified time: 02-03-2017
 
 # Template: -> ./dev/src/sass/elements/blocks/large-post.scss
 ?>
@@ -42,7 +42,7 @@
   <!-- END OUTPUT from 'core/themes/classy/templates/field/field.html.twig' -->
 
 
-  <h2>
+  <h2 class="truncate">
     <a href="?page=article" rel="bookmark">
         <!-- BEGIN OUTPUT from 'core/themes/classy/templates/field/field--node--title.html.twig' -->
         <span class="field field--name-title field--type-string field--label-hidden">Sao Paulo Calling</span>
