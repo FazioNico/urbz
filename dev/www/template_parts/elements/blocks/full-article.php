@@ -29,6 +29,20 @@
 
       </div><!-- Eof .card-content -->
 
+      <div class="authors-list center-align">
+        <p>
+          by
+          <span class="author-txt">
+            <a href="#">Name Lastname</a>,
+          </span>
+          <span class="author-txt">
+            <a href="#">Name Lastname</a>,
+          </span>
+          <span class="author-txt">
+            <a href="#">Name Lastname</a>
+          </span>
+        </p>
+      </div>
 
 
 

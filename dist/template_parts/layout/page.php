@@ -62,7 +62,7 @@ if(isset($_GET['page'])) {
         if($include_page == 'collection') {
           require './template_parts/elements/blocks/full-collection.php';
         }
-        else {
+        elseif ($include_page == 'article') {
           require './template_parts/elements/blocks/full-article.php';
         }
         ?>
@@ -98,6 +98,7 @@ if(isset($_GET['page'])) {
     </div>
 
     <section id="related-footer" class="row">
+      <h2>Related projects</h2>
       <?php require './template_parts/elements/blocks/related-footer.php';?>
       <?php require './template_parts/elements/blocks/related-footer.php';?>
       <?php require './template_parts/elements/blocks/related-footer.php';?>
@@ -114,7 +115,7 @@ if(isset($_GET['page'])) {
     default:
 ?>
       <!-- Main col Left Block -->
-      <div class="col m5">
+      <section class="col m5">
         <?php
           if($include_page == 'collection-overview') {
             require_once './template_parts/elements/blocks/accueil-teaser.php';
@@ -126,10 +127,10 @@ if(isset($_GET['page'])) {
         <?php require './template_parts/elements/blocks/small-collection.php';?>
         <?php require './template_parts/elements/blocks/small-collection.php';?>
         <?php require './template_parts/elements/blocks/small-collection.php';?>
-      </div>
+      </section>
 
       <!-- Main col right Block -->
-      <div class="col m7">
+      <section class="col m7">
         <?php require './template_parts/elements/blocks/large-article-post.php';?>
         <?php require './template_parts/elements/blocks/small-article-post.php';?>
         <?php require './template_parts/elements/blocks/small-article-post.php';?>
@@ -137,7 +138,7 @@ if(isset($_GET['page'])) {
         <?php require './template_parts/elements/blocks/small-article-post.php';?>
         <?php require './template_parts/elements/blocks/colored-article-post.php';?>
         <?php require './template_parts/elements/blocks/small-pdf-post.php';?>
-      </div>
+      </section>
 <?php
   }
 ?>

@@ -12,7 +12,7 @@
   <article role="article" about="/articles/sao-paulo-calling" class="card small-pdf-post z-depth-0 no-effect-img node node--type-article node--view-mode-overview-small">
 
     <!-- BEGIN OUTPUT from 'core/themes/classy/templates/field/field.html.twig' -->
-    <div class="card-image field field--name-field-overview-image field--type-image field--label-hidden field__item">
+    <div class="field field--name-field-overview-image field--type-image field--label-hidden field__item">
 
       <!-- THEME HOOK: 'responsive_image_formatter' -->
       <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/responsive-image-formatter.html.twig' -->

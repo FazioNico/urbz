@@ -32,12 +32,12 @@
     h1.title{
       display: block;
       width: calc(100% - 10%);
-      font-size: 30px;
-      line-height: 40px;
+      font-size: 44px;
+      line-height: 50px;
       margin: auto;
       margin-top: 170px;
       margin-bottom: 0px;
-      font-weight: 500;
+      font-weight: 900;
       text-align: center;
 
       a {
@@ -77,6 +77,21 @@
     .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating){
       text-transform: lowercase;
       font-size: 20px;
+    }
+
+    .authors-list {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #989898;
+      margin: 15px 0 5px;
+
+      span a {
+        color: #989898;
+      }
+      span a:hover {
+        color: #1c2229;
+      }
     }
 }
 
