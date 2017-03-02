@@ -90,6 +90,14 @@ if(isset($_GET['page'])) {
         </section>
     </div>
 
+    <div id="related-footer" class="row">
+      <?php require './template_parts/elements/blocks/related-footer.php';?>
+      <?php require './template_parts/elements/blocks/related-footer.php';?>
+      <?php require './template_parts/elements/blocks/related-footer.php';?>
+      <?php require './template_parts/elements/blocks/related-footer.php';?>
+
+    </div>
+
 <?php
     break;
 

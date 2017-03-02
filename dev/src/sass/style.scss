@@ -2,7 +2,7 @@
 // @Date:   20-02-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 01-03-2017
+// @Last modified time: 02-03-2017
 
 // Using Materialize CSS Framework: ./dev/src/bower_components/materialize/dist/css/materialize.css
 
@@ -14,11 +14,15 @@
 
 @import "./elements/blocks/wokshop.scss";
 @import "./elements/blocks/small-article-exhibition.scss";
+@import "./elements/blocks/full-article-exhibition.scss";
 @import "./elements/blocks/colored-article-post.scss";
 @import "./elements/blocks/large-post.scss";
 @import "./elements/blocks/authors.scss";
 @import "./elements/picture/card-image.scss";
 @import "./elements/time.scss";
+
+@import "./elements/blocks/related.scss";
+@import "./elements/blocks/google.scss";
 
 /* Fonts Face */
 @font-face {

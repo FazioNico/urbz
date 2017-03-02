@@ -211,14 +211,7 @@ div.col.m7 > .col{
   }
 }
 
-#related {
-  background: #fff;
-  padding-top:40px;
-  padding-bottom:40px;
-
-  .col h1,.col h2 {
-    padding-bottom: 30px;
-    margin: 0;
-    font-size: 30px;
-  }
+section .row .col.s12, .row section.col.m6 {
+  padding-left: 15px;
+  padding-right: 15px;
 }
