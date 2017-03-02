@@ -21,3 +21,16 @@ article.card:not(.no-effect-img):hover picture img {
 img.responsive-img, video.responsive-video {
     margin: auto;
 }
+picture {
+  position: relative;
+  display: block;
+}
+.material-placeholder::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 32px;
+  width: 32px;
+  background: #1c2229;
+}
