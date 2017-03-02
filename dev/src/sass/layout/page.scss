@@ -211,7 +211,16 @@ div.col.m7 > .col{
   }
 }
 
-section .row .col.s12, .row section.col.m6 {
+section .row .col.s12, .row section.col.m6, .row section.col.l3 {
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (max-width: 600px) {
+  .row .col.s6 {
+    width: 50%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    padding: 0 25px;
+  }
 }

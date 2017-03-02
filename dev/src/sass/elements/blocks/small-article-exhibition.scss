@@ -4,7 +4,7 @@
 // @Last modified by:   webmaster-fazio
 // @Last modified time: 02-03-2017
 
-.card.small-article-exhibition, .google-map-block, .small-article-related-footer {
+.card.small-article-exhibition, .google-map-block {
     margin-right: -10px;
     margin-bottom: 30px;
 
@@ -67,10 +67,6 @@
 
 @media screen and (max-width: 600px) {
   .card {
-      margin-left: -10px;
+      //margin-left: -10px;
   }
-}
-.small-article-related-footer .card-content {
-    padding: 0px;
-
 }
