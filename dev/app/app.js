@@ -3,7 +3,7 @@
 * @Date:   20-02-2017
 * @Email:  contact@nicolasfazio.ch
 * @Last modified by:   webmaster-fazio
-* @Last modified time: 24-02-2017
+* @Last modified time: 02-03-2017
 */
 console.log('test');
 
@@ -47,6 +47,14 @@ function navShowOnScroll(){
 			}
 	});
 }
+// open modal IMG box shadow on click .triggerModalIMG button
+function openPictureModal(){
+  $('.triggerModalIMG').on('click',function(e){
+    // select img of the trigger button
+    var img = $(e.target).prev().children();
+    img.trigger( "click" );
+  })
+}
 
 // load DOM function Effects
 toggleMenu()
@@ -57,4 +65,5 @@ navShowOnScroll()
 $(document).ready(function() {
   // dropdown input select form
   $('select').material_select();
+  openPictureModal()
 });
