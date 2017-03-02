@@ -42,7 +42,7 @@
   <!-- END OUTPUT from 'core/themes/classy/templates/field/field.html.twig' -->
 
 
-  <h2 class="truncate">
+  <h2>
     <a href="?page=article" rel="bookmark">
         <!-- BEGIN OUTPUT from 'core/themes/classy/templates/field/field--node--title.html.twig' -->
         <span class="field field--name-title field--type-string field--label-hidden">Sao Paulo Calling</span>
