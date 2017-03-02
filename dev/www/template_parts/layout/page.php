@@ -58,7 +58,14 @@ if(isset($_GET['page'])) {
       <!-- Main col Full Block (header)-->
     <section>
       <div class="row">
-        <?php require './template_parts/elements/blocks/full-collection.php';?>
+        <?php
+        if($include_page == 'collection') {
+          require './template_parts/elements/blocks/full-collection.php';
+        }
+        else {
+          require './template_parts/elements/blocks/full-article.php';
+        }
+        ?>
       </div>
       <div class="row">
         <div class="col m6">
@@ -90,13 +97,13 @@ if(isset($_GET['page'])) {
         </section>
     </div>
 
-    <div id="related-footer" class="row">
+    <section id="related-footer" class="row">
       <?php require './template_parts/elements/blocks/related-footer.php';?>
       <?php require './template_parts/elements/blocks/related-footer.php';?>
       <?php require './template_parts/elements/blocks/related-footer.php';?>
       <?php require './template_parts/elements/blocks/related-footer.php';?>
 
-    </div>
+    </section>
 
 <?php
     break;
