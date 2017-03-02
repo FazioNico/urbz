@@ -3,7 +3,7 @@
 # @Date:   20-02-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 22-02-2017
+# @Last modified time: 02-03-2017
 # @===================================
 #
 # @Templates SCSS file -> ./dev/src/sass/layout/pages.scss
@@ -15,7 +15,7 @@ if(isset($_GET['page'])) {
     $title = "User-generated Cities";
 }
 //print_r($include_page);
-  
+
 ?>
 
 <header class="header-front">
@@ -37,10 +37,10 @@ if(isset($_GET['page'])) {
 <main class="main-content row">
 
 <?php
-  
+
   // selection du layout en fonction du type de page
   switch($include_page) {
-    
+
     //----------------------1 columns
     // ------------------------------------- collection detail
     // ------------------------------------- search result page, topics page, tags page
@@ -56,28 +56,59 @@ if(isset($_GET['page'])) {
     case 'collection':
 ?>
       <!-- Main col Full Block (header)-->
+    <section>
       <div class="row">
-        <section class="col s12">
-          <!-- TODO -->
+        <?php require './template_parts/elements/blocks/full-collection.php';?>
+      </div>
+      <div class="row">
+        <div class="col m6">
+          <?php require './template_parts/elements/blocks/img-modal.php';?>
+          <?php require './template_parts/elements/blocks/img-legende.php';?>
+        </div>
+        <div class="col m6">
+          <!-- Block text simple -->
+          <?php require './template_parts/elements/blocks/simple-text.php';?>
+          <?php require './template_parts/elements/blocks/simple-text.php';?>
+          <?php require './template_parts/elements/blocks/google-map.php';?>
+        </div>
+        <div class="col m12">
+          <?php require './template_parts/elements/blocks/img-modal.php';?>
+        </div>
+      </div>
+    </section>
+
+    <div id="related" class="row">
+        <section class="col m6">
+          <h2>Articles of this project</h2>
+          <?php require './template_parts/elements/blocks/small-article-post.php';?>
+          <?php require './template_parts/elements/blocks/small-article-post.php';?>
+          <?php require './template_parts/elements/blocks/small-article-post.php';?>
         </section>
-      </div>
-      <div class="row">
-        <!-- TODO -->
-      </div>
-      <div class="row">
-        <!-- TODO -->
-      </div>
+        <section class="col m6">
+          <h2>Information</h2>
+          <?php require './template_parts/elements/blocks/simple-text.php';?>
+        </section>
+    </div>
+
+    <div id="related-footer" class="row">
+      <?php require './template_parts/elements/blocks/related-footer.php';?>
+      <?php require './template_parts/elements/blocks/related-footer.php';?>
+      <?php require './template_parts/elements/blocks/related-footer.php';?>
+      <?php require './template_parts/elements/blocks/related-footer.php';?>
+
+    </div>
+
 <?php
     break;
-    
+
     //----------------------2 columns
     // ------------------------------------- accueil
     // ------------------------------------- collection overview
     default:
 ?>
       <!-- Main col Left Block -->
-      <section class="col m5">
-        <?php 
+      <div class="col m5">
+        <?php
           if($include_page == 'collection-overview') {
             require_once './template_parts/elements/blocks/accueil-teaser.php';
           } else {
@@ -88,17 +119,17 @@ if(isset($_GET['page'])) {
         <?php require './template_parts/elements/blocks/small-collection.php';?>
         <?php require './template_parts/elements/blocks/small-collection.php';?>
         <?php require './template_parts/elements/blocks/small-collection.php';?>
-      </section>
+      </div>
 
       <!-- Main col right Block -->
-      <section class="col m7">
+      <div class="col m7">
         <?php require './template_parts/elements/blocks/large-article-post.php';?>
         <?php require './template_parts/elements/blocks/small-article-post.php';?>
         <?php require './template_parts/elements/blocks/small-article-post.php';?>
         <?php require './template_parts/elements/blocks/medium-article-post.php';?>
         <?php require './template_parts/elements/blocks/small-article-post.php';?>
         <?php require './template_parts/elements/blocks/colored-article-post.php';?>
-      </section>
+      </div>
 <?php
   }
 ?>
@@ -106,10 +137,10 @@ if(isset($_GET['page'])) {
 </main>
 
 <!-- Aside Panel Block -->
-<div class="side-panel">
+<aside class="side-panel">
   <div class="panel-header"><span class="title">Meanwhile</span></div>
   <div class="panel-container">
     <div id="feed" class="region-feed">
     </div>
   </div>
-</div>
+</aside>

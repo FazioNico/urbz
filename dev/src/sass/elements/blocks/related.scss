@@ -1,0 +1,25 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   02-03-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 02-03-2017
+
+#related, #related-footer {
+  padding-top:40px;
+  padding-bottom:40px;
+  margin-bottom: -10px;
+
+  .col h1,.col h2 {
+    padding-bottom: 30px;
+    margin: 0;
+    font-size: 30px;
+  }
+}
+
+#related {
+  background: #fff;
+}
+#related-footer{
+  background: #EEF6FB;
+  padding:60px 30px 40px 20px;
+}

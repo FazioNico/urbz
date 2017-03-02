@@ -1,16 +1,20 @@
 // @Author: Nicolas Fazio <webmaster-fazio>
-// @Date:   24-02-2017
+// @Date:   02-03-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
 // @Last modified time: 02-03-2017
 
-.card.small-article-exhibition, .google-map-block, .small-article-related-footer {
-    margin-right: -10px;
+
+// large full width (detail page)
+
+.card.full-article-exhibition {
+    margin: 0px -15px;
     margin-bottom: 30px;
 
     header {
       position: relative;
       overflow: hidden;
+      color: rgba(0,0,0,.87);
     }
     a {
       color: rgba(0,0,0,.87);
@@ -24,9 +28,10 @@
         text-transform: uppercase;
         padding: 4px 6px;
         background: white;
+        display: none;
     }
 
-    h2.title{
+    h1.title{
       position: absolute;
       width: calc(100% - 10%);
       left: 5%;
@@ -35,6 +40,7 @@
       line-height: 40px;
       margin-bottom: 0px;
       font-weight: 500;
+      color: #fff;
 
       a {
         color: #fff;
@@ -42,8 +48,10 @@
     }
 
     .card-content {
-      border: 1px solid #DADADB;
+      border: 0px solid #DADADB;
       border-bottom: none;
+      padding: 60px 24px 25px;
+      border-radius: 0px;
 
     }
 
@@ -66,11 +74,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .card {
-      margin-left: -10px;
-  }
-}
-.small-article-related-footer .card-content {
-    padding: 0px;
+  .full-article-exhibition.card {
 
+  }
 }
