@@ -67,7 +67,7 @@ body{
   background: #F6F8F9;
 
   header, nav, nav a, .page-title , .sub-level, .sub-level-title, .sub-level-container, .arrow-toggle,
-  .row, .col, img, section, article, .colored-article-post {
+  .row, .col, img, section, article, .colored-article-post, .authors-list span a {
     transition: all 250ms ease-in-out;
   }
 }

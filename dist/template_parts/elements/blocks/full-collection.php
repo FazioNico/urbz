@@ -14,7 +14,7 @@
       <header class="no-effect-img">
           <?php require './template_parts/elements/picture/img-srcset.php';?>
 
-        <h1 class="title truncate">
+        <h1 class="title">
             <span class="field field--name-title field--type-string field--label-hidden">
             Consequatur dolore impedit eveniet necessitatibus
             </span>

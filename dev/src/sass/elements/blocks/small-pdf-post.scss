@@ -9,4 +9,13 @@ article.card.small-pdf-post {
   .card-image img{
     border: solid 6px #D17B64;
   }
+  .card-image::after{
+    content: 'PDF';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #D17B64;
+    color: #fff;
+    padding: 12px 8px 8px;
+  }
 }

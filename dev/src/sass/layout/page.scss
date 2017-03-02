@@ -172,15 +172,15 @@ body > main.row {
   margin-right: 0px;
 }
 
-div.col.m7 > .col:first-of-type{
+section.col.m7 > .col:first-of-type{
   margin-top: 60px;
 }
-div.col.m7 > .col{
+section.col.m7 > .col{
   margin-top: 60px;
   padding: 0 20px 0 20px;
 }
 @media screen and (min-width: 601px) {
-  div.col.m7 > .col{
+  .col.m7 > .col{
     margin-top: 60px;
     padding: 0 40px 0 30px;
   }
