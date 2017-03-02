@@ -3,7 +3,7 @@
 # @Date:   26-02-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 26-02-2017
+# @Last modified time: 02-03-2017
 
 # Tempalte -> dev/src/sass/elements/blocks/colored-article-post.scss
 ?>

@@ -3,7 +3,7 @@
 # @Date:   24-02-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 25-02-2017
+# @Last modified time: 02-03-2017
 
 # Templates SCSS file -> dev/src/sass/elements/blocks/small-article-exhibition.scss
 ?>
