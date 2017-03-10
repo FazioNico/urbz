@@ -3,7 +3,7 @@
 * @Date:   15-09-2016
 * @Email:  contact@nicolasfazio.ch
 * @Last modified by:   webmaster-fazio
-* @Last modified time: 26-02-2017
+* @Last modified time: 10-03-2017
 */
 
 // importer les modules NPM
@@ -80,7 +80,7 @@ gulp.task('sass', function () {
       .pipe(sass())
       .on('error', handleError)
       .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
-      .pipe(cssmin())
+      //.pipe(cssmin())
       .pipe(gulp.dest('dev/src/css/'))
       .pipe(reload({stream:true}));
 });
@@ -123,7 +123,7 @@ gulp.task('copy-css', function () {
   return gulp.src(config.css)
     .pipe(useref())
     .pipe(concatCss("style.css"))
-    .pipe(cssmin({keepSpecialComments : 1}))
+    //.pipe(cssmin({keepSpecialComments : 1}))
     .pipe(gulp.dest(config.desDir+'/css'))
     .pipe(reload({stream:true}));
 });
