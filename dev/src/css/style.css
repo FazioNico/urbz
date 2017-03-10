@@ -505,6 +505,9 @@ article.card:not(.no-effect-img):hover picture img {
   transform: scale(1.2);
   opacity: .8; }
 
+article.card .field--name-field-overview-image.field--type-image picture {
+  position: relative; }
+
 .img-element {
   margin-bottom: 60px; }
 
