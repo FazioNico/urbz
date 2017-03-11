@@ -3,7 +3,7 @@
 * @Date:   20-02-2017
 * @Email:  contact@nicolasfazio.ch
 * @Last modified by:   webmaster-fazio
-* @Last modified time: 02-03-2017
+* @Last modified time: 10-03-2017
 */
 console.log('test');
 
@@ -66,4 +66,5 @@ $(document).ready(function() {
   // dropdown input select form
   $('select').material_select();
   openPictureModal()
+  $('.carousel.carousel-slider').carousel({fullWidth: true});
 });

@@ -1,0 +1,52 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   11-03-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 11-03-2017
+
+// header_people
+.header-slide {
+
+  position: relative;
+
+  .js-form-type-select {
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+    max-width: 200px;
+
+    @media screen and (min-width: 601px) {
+      bottom: 30px;
+    }
+
+    label, h1, h2 {
+      font-size: 44px;
+      color: #fff;
+      font-weight: 700;
+    }
+    .select-wrapper  {
+      margin:auto;
+      margin-top: 10px;
+      max-width: 140px;
+    }
+    .select-dropdown {
+        text-align: center;
+    }
+    .select-wrapper input.select-dropdown {
+      border: solid 1px #1C2229;
+      background: #fff;
+      color:#1C2229;
+      text-transform: uppercase;
+    }
+    ul.dropdown-content.select-dropdown li span {
+      color:#1C2229;
+      text-transform: uppercase;
+    }
+    span.caret {
+       color:#1C2229;
+       right:8px;
+       top:1px;
+       z-index: 1;
+     }
+  }
+}

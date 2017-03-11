@@ -2,7 +2,7 @@
 // @Date:   20-02-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 06-03-2017
+// @Last modified time: 11-03-2017
 
 // Using Materialize CSS Framework: ./dev/src/bower_components/materialize/dist/css/materialize.css
 
@@ -25,6 +25,10 @@
 @import "./elements/blocks/google.scss";
 @import "./elements/blocks/small-pdf-post.scss";
 @import "./elements/blocks/full-article.scss";
+@import "./elements/blocks/small-people.scss";
+
+@import "./elements/blocks/carousel.scss";
+@import "./elements/blocks/md-select.scss";
 
 /* Fonts Face */
 @font-face {
@@ -70,4 +74,18 @@ body{
   .row, .col, img, section, article, .colored-article-post, .authors-list span a {
     transition: all 250ms ease-in-out;
   }
+}
+
+/* Remove md css on nav html tag */
+nav:not(.primary-nav) {
+  background: transparent;
+  height: auto!important;
+  line-height: inherit!important;
+  color: inherit;
+  box-shadow:none;
+}
+
+// Drupal hidde class reflect
+.visually-hidden, .litebox-caption.field--label-hidden {
+  display: none;
 }
