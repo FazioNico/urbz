@@ -8498,8 +8498,8 @@ body > header .brand-logo {
   top: 8px;
   height: 100px;
   width: 70px;
-  background-image: url("../../../../img/logo_white.png");
-  background-image: url("../../../../img/logo_white.svg");
+  background-image: url(../img/logo_white.png);
+  background-image: url(../img/logo_white.svg);
   background-repeat: no-repeat;
   background-size: 70px auto;
   background-position: center;
@@ -8579,8 +8579,8 @@ body > header.show {
 }
 
 body > header.show .brand-logo {
-  background-image: url("../../../../img/logo_dark.png");
-  background-image: url("../../../../img/logo_dark.svg");
+  background-image: url(../img/logo_dark.png);
+  background-image: url(../img/logo_dark.svg);
 }
 
 body > header.show .page-title {
@@ -8604,8 +8604,8 @@ body > header.menu-is-open .brand-logo {
   top: 8px;
   height: 100px;
   width: 70px;
-  background-image: url("../../../../img/logo_white.png");
-  background-image: url("../../../../img/logo_white.svg");
+  background-image: url(../img/logo_white.png);
+  background-image: url(../img/logo_white.svg);
   background-repeat: no-repeat;
   background-size: 70px auto;
   background-position: center;
@@ -9640,32 +9640,72 @@ button.slick-prev {
   z-index: 1;
 }
 
+#people-detail {
+  padding: 60px 30px 40px 20px;
+}
+
+@media screen and (max-width: 600px) {
+  #people-detail {
+    padding: 60px 20px 40px 20px;
+  }
+}
+
+#people-detail h1#people-name {
+  display: block;
+  width: calc(100% - 10%);
+  font-size: 44px;
+  line-height: 50px;
+  margin: auto;
+  padding-top: 110px;
+  margin-bottom: 0px;
+  font-weight: 900;
+  text-align: center;
+}
+
+#people-detail #center-specialisation {
+  padding-bottom: 60px;
+}
+
+#people-detail #center-specialisation p.flow-text {
+  margin: 0;
+}
+
+#people-detail .row .col.s12.m6:first-of-type {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#people-detail .row .col.s12.m6:last-of-type {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 /* Fonts Face */
 
 @font-face {
   font-family: 'karla-bold';
-  src: url("../../../../fonts/karla-wf/karla-bold-webfont.woff2") format("woff2"), url("../../../../fonts/karla-wf/karla-bold-webfont.woff") format("woff");
+  src: url("../fonts/karla-wf/karla-bold-webfont.woff2") format("woff2"), url("../fonts/karla-wf/karla-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'karla-bold-italic';
-  src: url("../../../../fonts/karla-wf/karla-bolditalic-webfont.woff2") format("woff2"), url("../../../../fonts/karla-wf/karla-bolditalic-webfont.woff") format("woff");
+  src: url("../fonts/karla-wf/karla-bolditalic-webfont.woff2") format("woff2"), url("../fonts/karla-wf/karla-bolditalic-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'karla-italic';
-  src: url("../../../../fonts/karla-wf/karla-italic-webfont.woff2") format("woff2"), url("../../../../fonts/karla-wf/karla-italic-webfont.woff") format("woff");
+  src: url("../fonts/karla-wf/karla-italic-webfont.woff2") format("woff2"), url("../fonts/karla-wf/karla-italic-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'karla-regular';
-  src: url("../../../../fonts/karla-wf/karla-regular-webfont.woff2") format("woff2"), url("../../../../fonts/karla-wf/karla-regular-webfont.woff") format("woff");
+  src: url("../fonts/karla-wf/karla-regular-webfont.woff2") format("woff2"), url("../fonts/karla-wf/karla-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -9709,46 +9749,6 @@ nav:not(.primary-nav) {
 .visually-hidden,
 .litebox-caption.field--label-hidden {
   display: none;
-}
-
-#people-detail {
-  padding: 60px 30px 40px 20px;
-}
-
-@media screen and (max-width: 600px) {
-  #people-detail {
-    padding: 60px 20px 40px 20px;
-  }
-}
-
-#people-detail h1#people-name {
-  display: block;
-  width: calc(100% - 10%);
-  font-size: 44px;
-  line-height: 50px;
-  margin: auto;
-  padding-top: 110px;
-  margin-bottom: 0px;
-  font-weight: 900;
-  text-align: center;
-}
-
-#people-detail #center-specialisation {
-  padding-bottom: 60px;
-}
-
-#people-detail #center-specialisation p.flow-text {
-  margin: 0;
-}
-
-#people-detail .row .col.s12.m6:first-of-type {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-#people-detail .row .col.s12.m6:last-of-type {
-  padding-left: 0px;
-  padding-right: 0px;
 }
 
 section .row .col.m6.s12,

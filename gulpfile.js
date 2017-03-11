@@ -3,7 +3,7 @@
 * @Date:   15-09-2016
 * @Email:  contact@nicolasfazio.ch
 * @Last modified by:   webmaster-fazio
-* @Last modified time: 10-03-2017
+* @Last modified time: 11-03-2017
 */
 
 // importer les modules NPM
@@ -29,6 +29,8 @@ var sass              = require('gulp-sass');
 var autoprefixer      = require('gulp-autoprefixer');
 var useref            = require('gulp-useref');
 var gutil = require('gulp-util');
+//var rebaseUrls = require('gulp-css-rebase-urls');
+var urlAdjuster = require('gulp-css-url-adjuster');
 
 // Config of project folders
 var config = {
@@ -122,8 +124,12 @@ gulp.task("copy-php", function(){
 gulp.task('copy-css', function () {
   return gulp.src(config.css)
     .pipe(useref())
-    .pipe(concatCss("style.css"))
+    .pipe(concatCss("style.css", { rebaseUrls: false }))
     //.pipe(cssmin({keepSpecialComments : 1}))
+    // .pipe(urlAdjuster({
+    //   prepend: '../toto/',
+    //   append: '?version=1',
+    // }))
     .pipe(gulp.dest(config.desDir+'/css'))
     .pipe(reload({stream:true}));
 });
