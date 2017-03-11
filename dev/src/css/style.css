@@ -812,6 +812,32 @@ button.slick-prev {
       top: 1px;
       z-index: 1; }
 
+#people-detail {
+  padding: 60px 30px 40px 20px; }
+  @media screen and (max-width: 600px) {
+    #people-detail {
+      padding: 60px 20px 40px 20px; } }
+  #people-detail h1#people-name {
+    display: block;
+    width: calc(100% - 10%);
+    font-size: 44px;
+    line-height: 50px;
+    margin: auto;
+    padding-top: 110px;
+    margin-bottom: 0px;
+    font-weight: 900;
+    text-align: center; }
+  #people-detail #center-specialisation {
+    padding-bottom: 60px; }
+    #people-detail #center-specialisation p.flow-text {
+      margin: 0; }
+  #people-detail .row .col.s12.m6:first-of-type {
+    padding-left: 0px;
+    padding-right: 0px; }
+  #people-detail .row .col.s12.m6:last-of-type {
+    padding-left: 0px;
+    padding-right: 0px; }
+
 /* Fonts Face */
 @font-face {
   font-family: 'karla-bold';
@@ -856,32 +882,6 @@ nav:not(.primary-nav) {
 
 .visually-hidden, .litebox-caption.field--label-hidden {
   display: none; }
-
-#people-detail {
-  padding: 60px 30px 40px 20px; }
-  @media screen and (max-width: 600px) {
-    #people-detail {
-      padding: 60px 20px 40px 20px; } }
-  #people-detail h1#people-name {
-    display: block;
-    width: calc(100% - 10%);
-    font-size: 44px;
-    line-height: 50px;
-    margin: auto;
-    padding-top: 110px;
-    margin-bottom: 0px;
-    font-weight: 900;
-    text-align: center; }
-  #people-detail #center-specialisation {
-    padding-bottom: 60px; }
-    #people-detail #center-specialisation p.flow-text {
-      margin: 0; }
-  #people-detail .row .col.s12.m6:first-of-type {
-    padding-left: 0px;
-    padding-right: 0px; }
-  #people-detail .row .col.s12.m6:last-of-type {
-    padding-left: 0px;
-    padding-right: 0px; }
 
 section .row .col.m6.s12,
 section .row .col.s12 {
