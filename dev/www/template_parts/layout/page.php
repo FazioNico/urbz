@@ -3,7 +3,7 @@
 # @Date:   20-02-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 10-03-2017
+# @Last modified time: 11-03-2017
 # @===================================
 #
 # @Templates SCSS file -> ./dev/src/sass/layout/pages.scss
@@ -70,7 +70,7 @@ if(isset($_GET['page'])) {
 
       </div>
       <div class="row">
-        <!--  TODO: grid of people -->
+        <!--  grid of people -->
         <div class="item-list--blazy item-list--blazy-column item-list">
           <ul class="blazy blazy--grid block-column block-count-55 small-block-column-1 medium-block-column-2 large-block-column-4 blazy--on" data-blazy="&quot;&quot;">
             <?php require './template_parts/elements/blocks/small-people.php';?>
@@ -89,6 +89,15 @@ if(isset($_GET['page'])) {
     break;
 
     case 'user':
+    ?>
+    <section>
+      <div class="row">
+        user
+      </div>
+    </section>
+    <?php
+    break;
+
     case 'article':
     case 'about':
     case 'search':

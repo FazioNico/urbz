@@ -3,14 +3,14 @@
 # @Date:   10-03-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 10-03-2017
+# @Last modified time: 11-03-2017
 ?>
 
 <li class="col s12 m4 l3 grid grid--0">
   <div class="grid__content">
     <article typeof="schema:Person" about="/simon" class="profile">
       <div class="field field--name-field-user-picture field--type-image field--label-hidden field__item">
-        <a href="/simon">
+        <a href="?page=user">
             <?php require './template_parts/elements/picture/img-srcset.php';?>                    </a>
       </div>
       <div class="field field--name-field-team-category field--type-entity-reference field--label-hidden field__item">

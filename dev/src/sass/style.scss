@@ -27,6 +27,9 @@
 @import "./elements/blocks/full-article.scss";
 @import "./elements/blocks/small-people.scss";
 
+@import "./elements/blocks/carousel.scss";
+@import "./elements/blocks/md-select.scss";
+
 /* Fonts Face */
 @font-face {
     font-family: 'karla-bold';
@@ -85,102 +88,4 @@ nav:not(.primary-nav) {
 // Drupal hidde class reflect
 .visually-hidden, .litebox-caption.field--label-hidden {
   display: none;
-}
-
-// header_people
-.header-slide {
-
-  position: relative;
-
-  .js-form-type-select {
-    position: absolute;
-    bottom: 0px;
-    left: 30px;
-    max-width: 200px;
-
-    @media screen and (min-width: 601px) {
-      bottom: 30px;
-    }
-
-    label, h1, h2 {
-      font-size: 44px;
-      color: #fff;
-      font-weight: 700;
-    }
-    .select-wrapper  {
-      margin:auto;
-      margin-top: 10px;
-      max-width: 140px;
-    }
-    .select-dropdown {
-        text-align: center;
-    }
-    .select-wrapper input.select-dropdown {
-      border: solid 1px #1C2229;
-      background: #fff;
-      color:#1C2229;
-      text-transform: uppercase;
-    }
-    ul.dropdown-content.select-dropdown li span {
-      color:#1C2229;
-      text-transform: uppercase;
-    }
-    span.caret {
-       color:#1C2229;
-       right:8px;
-       top:1px;
-       z-index: 1;
-     }
-  }
-}
-
-
-// slider
-.carousel.carousel-slider {
-    min-height: 213px;
-    height: auto;
-    margin-bottom: 50px;
-
-    .carousel-item {
-      min-height: 213px;
-    }
-    .slide__constrained {
-      display: none;
-    }
-    @media screen and (min-width: 601px) {
-      min-height: 400px;
-
-      .carousel-item {
-        min-height: 400px;
-      }
-    }
-}
-button i.material-icons {
-    border: solid 2px #fff;
-    border-radius: 100%;
-    line-height: 56px;
-}
-#slick-block-content-1-header-images-default-1 {
-    position: relative;
-}
-button.slick-next, button.slick-prev  {
-    position: absolute;
-    top: 0;
-    width: 70px;
-    height: 100%;
-    color: #fff;
-    background: transparent;
-    border: 0px solid transparent;
-
-    @media screen and (max-width: 600px) {
-      i.material-icons {
-        border: solid 0px #fff;
-      }
-    }
-}
-button.slick-next {
-  right: 0;
-}
-button.slick-prev {
-    left: 0;
 }
