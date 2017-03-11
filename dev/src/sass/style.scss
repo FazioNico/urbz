@@ -96,3 +96,44 @@ section .row .col.m6.s12,
 section .row .col.s12 {
   margin-bottom:60px;
 }
+
+
+// contact-form
+#contact-form {
+  input:not([type]):focus:not([readonly]),
+  input[type=text]:focus:not([readonly]),
+  input[type=password]:focus:not([readonly]),
+  input[type=email]:focus:not([readonly]),
+  input[type=url]:focus:not([readonly]),
+  input[type=time]:focus:not([readonly]),
+  input[type=date]:focus:not([readonly]),
+  input[type=datetime]:focus:not([readonly]),
+  input[type=datetime-local]:focus:not([readonly]),
+  input[type=tel]:focus:not([readonly]),
+  input[type=number]:focus:not([readonly]),
+  input[type=search]:focus:not([readonly]),
+  textarea.materialize-textarea:focus:not([readonly]){
+    border: 1px solid #d2d1d1!important;
+    box-shadow: none!important;
+  }
+
+  input:not([type]):not([readonly]),
+  input[type=text]:not([readonly]),
+  input[type=password]:not([readonly]),
+  input[type=email]:not([readonly]),
+  input[type=url]:not([readonly]),
+  input[type=time]:not([readonly]),
+  input[type=date]:not([readonly]),
+  input[type=datetime]:not([readonly]),
+  input[type=datetime-local]:not([readonly]),
+  input[type=tel]:not([readonly]),
+  input[type=number]:not([readonly]),
+  input[type=search]:not([readonly]),
+  textarea.materialize-textarea:not([readonly]){
+    border: 1px solid #d2d1d1!important;
+    padding: 5px 15px;
+    background: #f6f8f9;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
