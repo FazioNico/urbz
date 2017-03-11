@@ -208,7 +208,16 @@ if(isset($_GET['page'])) {
         </section>
         <section class="col m6">
           <h2>Information</h2>
-          <?php require './template_parts/elements/blocks/simple-text.php';?>
+          <div id="inline_fields" class="col s12 ">
+            <?php require './template_parts/elements/fields/label-date_creation.php';?>
+            <?php require './template_parts/elements/fields/label-location.php';?>
+            <?php require './template_parts/elements/fields/label-authors.php';?>
+            <?php require './template_parts/elements/fields/label-people.php';?>
+            <?php require './template_parts/elements/fields/label-topic.php';?>
+            <?php require './template_parts/elements/fields/label-tags.php';?>
+          </div>
+
+          <?php //require './template_parts/elements/blocks/simple-text.php';?>
         </section>
     </div>
 
