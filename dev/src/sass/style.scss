@@ -2,7 +2,7 @@
 // @Date:   20-02-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 06-03-2017
+// @Last modified time: 11-03-2017
 
 // Using Materialize CSS Framework: ./dev/src/bower_components/materialize/dist/css/materialize.css
 
@@ -25,6 +25,7 @@
 @import "./elements/blocks/google.scss";
 @import "./elements/blocks/small-pdf-post.scss";
 @import "./elements/blocks/full-article.scss";
+@import "./elements/blocks/small-people.scss";
 
 /* Fonts Face */
 @font-face {
@@ -70,4 +71,116 @@ body{
   .row, .col, img, section, article, .colored-article-post, .authors-list span a {
     transition: all 250ms ease-in-out;
   }
+}
+
+/* Remove md css on nav html tag */
+nav:not(.primary-nav) {
+  background: transparent;
+  height: auto!important;
+  line-height: inherit!important;
+  color: inherit;
+  box-shadow:none;
+}
+
+// Drupal hidde class reflect
+.visually-hidden, .litebox-caption.field--label-hidden {
+  display: none;
+}
+
+// header_people
+.header-slide {
+
+  position: relative;
+
+  .js-form-type-select {
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+    max-width: 200px;
+
+    @media screen and (min-width: 601px) {
+      bottom: 30px;
+    }
+
+    label, h1, h2 {
+      font-size: 44px;
+      color: #fff;
+      font-weight: 700;
+    }
+    .select-wrapper  {
+      margin:auto;
+      margin-top: 10px;
+      max-width: 140px;
+    }
+    .select-dropdown {
+        text-align: center;
+    }
+    .select-wrapper input.select-dropdown {
+      border: solid 1px #1C2229;
+      background: #fff;
+      color:#1C2229;
+      text-transform: uppercase;
+    }
+    ul.dropdown-content.select-dropdown li span {
+      color:#1C2229;
+      text-transform: uppercase;
+    }
+    span.caret {
+       color:#1C2229;
+       right:8px;
+       top:1px;
+       z-index: 1;
+     }
+  }
+}
+
+
+// slider
+.carousel.carousel-slider {
+    min-height: 213px;
+    height: auto;
+    margin-bottom: 50px;
+
+    .carousel-item {
+      min-height: 213px;
+    }
+    .slide__constrained {
+      display: none;
+    }
+    @media screen and (min-width: 601px) {
+      min-height: 400px;
+
+      .carousel-item {
+        min-height: 400px;
+      }
+    }
+}
+button i.material-icons {
+    border: solid 2px #fff;
+    border-radius: 100%;
+    line-height: 56px;
+}
+#slick-block-content-1-header-images-default-1 {
+    position: relative;
+}
+button.slick-next, button.slick-prev  {
+    position: absolute;
+    top: 0;
+    width: 70px;
+    height: 100%;
+    color: #fff;
+    background: transparent;
+    border: 0px solid transparent;
+
+    @media screen and (max-width: 600px) {
+      i.material-icons {
+        border: solid 0px #fff;
+      }
+    }
+}
+button.slick-next {
+  right: 0;
+}
+button.slick-prev {
+    left: 0;
 }

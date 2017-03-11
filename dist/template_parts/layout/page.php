@@ -3,7 +3,7 @@
 # @Date:   20-02-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 02-03-2017
+# @Last modified time: 10-03-2017
 # @===================================
 #
 # @Templates SCSS file -> ./dev/src/sass/layout/pages.scss
@@ -49,6 +49,45 @@ if(isset($_GET['page'])) {
     // ------------------------------------- user detail
     // ------------------------------------- people
     case 'people':
+    ?>
+    <section>
+      <div class="row">
+
+        <div class="header-slide">
+          <?php require './template_parts/elements/blocks/full-slide.php';?>
+          <div class="js-form-item form-item js-form-type-select form-type-select js-form-item-team form-item-team">
+            <label for="edit-team">People</label>
+            <select data-drupal-selector="edit-team" id="edit-team" name="Team" class="form-select initialized">
+              <option value="All" selected="selected">- Any -</option>
+              <option value="184">Bangkok</option>
+              <option value="148">Berlin</option>
+              <option value="211">Chile</option>
+              <option value="147">Goa</option>
+              <option value="212">Italy</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <!--  TODO: grid of people -->
+        <div class="item-list--blazy item-list--blazy-column item-list">
+          <ul class="blazy blazy--grid block-column block-count-55 small-block-column-1 medium-block-column-2 large-block-column-4 blazy--on" data-blazy="&quot;&quot;">
+            <?php require './template_parts/elements/blocks/small-people.php';?>
+            <?php require './template_parts/elements/blocks/small-people.php';?>
+            <?php require './template_parts/elements/blocks/small-people.php';?>
+            <?php require './template_parts/elements/blocks/small-people.php';?>
+            <?php require './template_parts/elements/blocks/small-people.php';?>
+            <?php require './template_parts/elements/blocks/small-people.php';?>
+            <?php require './template_parts/elements/blocks/small-people.php';?>
+            <?php require './template_parts/elements/blocks/small-people.php';?>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <?php
+    break;
+
     case 'user':
     case 'article':
     case 'about':
