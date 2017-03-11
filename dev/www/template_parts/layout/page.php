@@ -52,22 +52,7 @@ if(isset($_GET['page'])) {
     ?>
     <section>
       <div class="row">
-
-        <div class="header-slide">
-          <?php require './template_parts/elements/blocks/full-slide.php';?>
-          <div class="js-form-item form-item js-form-type-select form-type-select js-form-item-team form-item-team">
-            <label for="edit-team">People</label>
-            <select data-drupal-selector="edit-team" id="edit-team" name="Team" class="form-select initialized">
-              <option value="All" selected="selected">- Any -</option>
-              <option value="184">Bangkok</option>
-              <option value="148">Berlin</option>
-              <option value="211">Chile</option>
-              <option value="147">Goa</option>
-              <option value="212">Italy</option>
-            </select>
-          </div>
-        </div>
-
+        <?php require './template_parts/elements/blocks/header-people.php';?>
       </div>
       <div class="row">
         <!--  grid of people -->
@@ -93,64 +78,16 @@ if(isset($_GET['page'])) {
     <section id="people-detail">
       <div class="row">
 
-        <header class="col s12">
-          <div typeof="schema:Person" about="/user/1" class="profile">
+        <?php require './template_parts/elements/blocks/header-poeple_detail.php';?>
 
-            <h1 id="people-name" class="center-align">
-              <span class="field field--name-field-first-name field--type-string field--label-hidden field__item">
-                Christian
-              </span>
-              <span class="field field--name-field-family-name field--type-string field--label-hidden field__item">
-                Vallebella
-              </span>
-            </h1>
-
-            <div id="center-specialisation">
-              <div class="field field--name-field-team-category field--type-entity-reference field--label-hidden field__item">
-                <p class="flow-text center-align">
-                  Volunteer
-                </p>
-              </div>
-            </div>
-
-            <div class="field field--name-field-content field--type-entity-reference-revisions field--label-hidden field__items">
-
-              <!-- item -->
-              <div class="field__item">
-                <div class="paragraph paragraph--type--image-text paragraph--view-mode--default">
-                  <div class="blazy field field--name-field-image-demo field--type-image field--label-hidden field__item blazy--on" data-blazy="" data-colorbox-gallery="">
-
-                      <a href="#" class="blazy__colorbox litebox" data-colorbox-trigger="" >
-                        <div class="media media--blazy  media--switch media--switch--colorbox media--responsive media--image">
-                            <?php require './template_parts/elements/picture/img-srcset.php';?>
-                        </div>
-                        <div class="litebox-caption visually-hidden">
-                          an image in a paragraph over 2 column
-                        </div>
-                        <div class="blazy__caption">
-                          <div class="blazy__description">
-                            an image in a paragraph over 2 column
-                          </div>
-                        </div>
-                      </a>
-
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div> <!-- eof item article people detail -->
-        </header><!-- eof header article people detail-->
-
-        <div class="row">
-          <div class="col s12 m6">
-            <?php require './template_parts/elements/blocks/img-legende.php';?>
-          </div>
-          <div class="col s12 m6">
-            <?php require './template_parts/elements/blocks/simple-text.php';?>
-            <?php require './template_parts/elements/blocks/google-map.php';?>
-          </div>
+        <div class="col s12 m6">
+          <?php require './template_parts/elements/blocks/img-legende.php';?>
         </div>
+        <div class="col s12 m6">
+          <?php require './template_parts/elements/blocks/simple-text.php';?>
+          <?php require './template_parts/elements/blocks/google-map.php';?>
+        </div>
+
 
       </div>
     </section>
@@ -177,9 +114,13 @@ if(isset($_GET['page'])) {
         if($include_page == 'collection') {
           require './template_parts/elements/blocks/full-collection.php';
         }
-        elseif ($include_page == 'article') {
+        elseif ($include_page == 'search') {
+          // TODO
+        }
+        else {
           require './template_parts/elements/blocks/full-article.php';
         }
+
         ?>
       </div>
       <div class="row">
@@ -201,21 +142,30 @@ if(isset($_GET['page'])) {
 
     <div id="related" class="row">
         <section class="col m6">
-          <h2>Articles of this project</h2>
-          <?php require './template_parts/elements/blocks/small-article-post.php';?>
-          <?php require './template_parts/elements/blocks/small-article-post.php';?>
-          <?php require './template_parts/elements/blocks/small-article-post.php';?>
+          <?php if($include_page == 'about') { ?>
+            <h2>Drop us a line</h2>
+            <?php require './template_parts/elements/blocks/simple-text.php';?>
+          <?php } else {?>
+            <h2>Articles of this project</h2>
+            <?php require './template_parts/elements/blocks/small-article-post.php';?>
+            <?php require './template_parts/elements/blocks/small-article-post.php';?>
+            <?php require './template_parts/elements/blocks/small-article-post.php';?>
+          <?php } ?>
         </section>
         <section class="col m6">
-          <h2>Information</h2>
-          <div id="inline_fields" class="col s12 ">
-            <?php require './template_parts/elements/fields/label-date_creation.php';?>
-            <?php require './template_parts/elements/fields/label-location.php';?>
-            <?php require './template_parts/elements/fields/label-authors.php';?>
-            <?php require './template_parts/elements/fields/label-people.php';?>
-            <?php require './template_parts/elements/fields/label-topic.php';?>
-            <?php require './template_parts/elements/fields/label-tags.php';?>
-          </div>
+          <?php if($include_page == 'about') { ?>
+            <?php require './template_parts/elements/blocks/contact-form.php';?>
+          <?php } else {?>
+            <h2>Information</h2>
+            <div id="inline_fields" class="col s12 ">
+              <?php require './template_parts/elements/fields/label-date_creation.php';?>
+              <?php require './template_parts/elements/fields/label-location.php';?>
+              <?php require './template_parts/elements/fields/label-authors.php';?>
+              <?php require './template_parts/elements/fields/label-people.php';?>
+              <?php require './template_parts/elements/fields/label-topic.php';?>
+              <?php require './template_parts/elements/fields/label-tags.php';?>
+            </div>
+          <?php } ?>
 
           <?php //require './template_parts/elements/blocks/simple-text.php';?>
         </section>

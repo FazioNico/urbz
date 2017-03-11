@@ -9230,6 +9230,15 @@ picture {
   opacity: 0.8;
 }
 
+figure {
+  margin: 0px;
+  position: relative;
+}
+
+figure:hover img {
+  opacity: 0.8;
+}
+
 time.datetime {
   display: block;
   font-size: 12px;
@@ -9780,4 +9789,41 @@ nav:not(.primary-nav) {
 section .row .col.m6.s12,
 section .row .col.s12 {
   margin-bottom: 60px;
+}
+
+#contact-form input:not([type]):focus:not([readonly]),
+#contact-form input[type=text]:focus:not([readonly]),
+#contact-form input[type=password]:focus:not([readonly]),
+#contact-form input[type=email]:focus:not([readonly]),
+#contact-form input[type=url]:focus:not([readonly]),
+#contact-form input[type=time]:focus:not([readonly]),
+#contact-form input[type=date]:focus:not([readonly]),
+#contact-form input[type=datetime]:focus:not([readonly]),
+#contact-form input[type=datetime-local]:focus:not([readonly]),
+#contact-form input[type=tel]:focus:not([readonly]),
+#contact-form input[type=number]:focus:not([readonly]),
+#contact-form input[type=search]:focus:not([readonly]),
+#contact-form textarea.materialize-textarea:focus:not([readonly]) {
+  border: 1px solid #d2d1d1 !important;
+  box-shadow: none !important;
+}
+
+#contact-form input:not([type]):not([readonly]),
+#contact-form input[type=text]:not([readonly]),
+#contact-form input[type=password]:not([readonly]),
+#contact-form input[type=email]:not([readonly]),
+#contact-form input[type=url]:not([readonly]),
+#contact-form input[type=time]:not([readonly]),
+#contact-form input[type=date]:not([readonly]),
+#contact-form input[type=datetime]:not([readonly]),
+#contact-form input[type=datetime-local]:not([readonly]),
+#contact-form input[type=tel]:not([readonly]),
+#contact-form input[type=number]:not([readonly]),
+#contact-form input[type=search]:not([readonly]),
+#contact-form textarea.materialize-textarea:not([readonly]) {
+  border: 1px solid #d2d1d1 !important;
+  padding: 5px 15px;
+  background: #f6f8f9;
+  width: 100%;
+  box-sizing: border-box;
 }

@@ -41,3 +41,11 @@ picture {
 .triggerModalIMG:hover img {
   opacity: 0.8;
 }
+
+figure {
+  margin: 0px;
+  position: relative;
+}
+figure:hover img{
+  opacity: 0.8;
+}
