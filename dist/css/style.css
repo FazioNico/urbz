@@ -9172,7 +9172,7 @@ article.card.colored-article-post:hover {
   color: #1C2229;
 }
 
-.field.field--name-field-authors {
+.card .field.field--name-field-authors {
   position: relative;
   overflow: hidden;
   display: inline-block;
@@ -9183,13 +9183,13 @@ article.card.colored-article-post:hover {
   min-width: 48px;
 }
 
-.field.field--name-field-authors .field__item {
+.card .field.field--name-field-authors .field__item {
   display: inline-block;
   text-align: center;
   margin: 0 auto;
 }
 
-.field.field--name-field-authors .field__item img {
+.card .field.field--name-field-authors .field__item img {
   max-height: 48px;
   max-width: 48px;
   margin: 0px -6px;
@@ -9255,9 +9255,9 @@ time.datetime {
 }
 
 #related .col h1,
-#related .col h2,
+#related .col > h2,
 #related-footer .col h1,
-#related-footer .col h2 {
+#related-footer .col > h2 {
   padding-bottom: 30px;
   margin: 0;
   font-size: 30px;
@@ -9274,6 +9274,32 @@ time.datetime {
 
 #related .col.m6 > h2 {
   padding-left: 10px;
+}
+
+#related .s12 time.datetime {
+  text-align: left;
+  display: inline;
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+}
+
+#related #inline_fields .field__label {
+  display: inline;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+#related #inline_fields .field__item {
+  display: inline;
+}
+
+#related #inline_fields .field__items {
+  display: inline;
+}
+
+#related #inline_fields a {
+  color: #212121;
 }
 
 #related-footer {
