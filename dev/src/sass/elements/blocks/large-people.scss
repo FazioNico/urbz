@@ -1,0 +1,43 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   11-03-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 11-03-2017
+
+
+// people detail
+#people-detail {
+  padding: 60px 30px 40px 20px;
+
+  @media screen and (max-width: 600px) {
+    padding: 60px 20px 40px 20px;
+  }
+
+  h1#people-name {
+     display: block;
+     width: calc(100% - 10%);
+     font-size: 44px;
+     line-height: 50px;
+     margin: auto;
+     padding-top: 110px;
+     margin-bottom: 0px;
+     font-weight: 900;
+     text-align: center;
+ }
+ #center-specialisation {
+   padding-bottom: 60px;
+
+   p.flow-text {
+     margin:0;
+   }
+ }
+
+ .row .col.s12.m6:first-of-type {
+   padding-left: 0px;
+   padding-right: 0px;
+ }
+ .row .col.s12.m6:last-of-type {
+   padding-left: 0px;
+   padding-right: 0px;
+ }
+}

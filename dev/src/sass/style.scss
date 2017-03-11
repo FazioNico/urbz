@@ -29,6 +29,7 @@
 
 @import "./elements/blocks/carousel.scss";
 @import "./elements/blocks/md-select.scss";
+@import "./elements/blocks/large-people.scss";
 
 /* Fonts Face */
 @font-face {
@@ -88,4 +89,10 @@ nav:not(.primary-nav) {
 // Drupal hidde class reflect
 .visually-hidden, .litebox-caption.field--label-hidden {
   display: none;
+}
+
+// clean bottom item list
+section .row .col.m6.s12,
+section .row .col.s12 {
+  margin-bottom:60px;
 }
