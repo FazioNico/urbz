@@ -866,6 +866,139 @@ button.slick-prev {
     padding-left: 0px;
     padding-right: 0px; }
 
+#search .block-views-exposed-filter-blocksearch-page-1 {
+  padding-top: 170px; }
+  #search .block-views-exposed-filter-blocksearch-page-1 input#edit-search-api-fulltext {
+    font-size: 44px;
+    padding: 10px 0px;
+    text-align: center;
+    border-bottom: solid 4px; }
+  #search .block-views-exposed-filter-blocksearch-page-1 input#edit-search-api-fulltext::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #202020; }
+  #search .block-views-exposed-filter-blocksearch-page-1 input#edit-search-api-fulltext::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #202020; }
+  #search .block-views-exposed-filter-blocksearch-page-1 input#edit-search-api-fulltext:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #202020; }
+  #search .block-views-exposed-filter-blocksearch-page-1 input#edit-search-api-fulltext:-moz-placeholder {
+    /* Firefox 18- */
+    color: #202020; }
+  #search .block-views-exposed-filter-blocksearch-page-1 .input-field .prefix {
+    right: 0;
+    top: 20px;
+    cursor: pointer; }
+  #search .block-views-exposed-filter-blocksearch-page-1 .input-field .prefix.active {
+    color: #202020; }
+  @media screen and (max-width: 600px) {
+    #search .block-views-exposed-filter-blocksearch-page-1 .input-field .prefix ~ input {
+      margin-left: 1.5rem; } }
+  #search .block-views-exposed-filter-blocksearch-page-1 #edit-submit-search {
+    display: none; }
+
+#search .row .col.s12 {
+  margin-bottom: 20px; }
+
+#search .search-result {
+  font-weight: 700;
+  padding: 0px 15px; }
+
+#search .node__content .s12 time.datetime {
+  text-align: left;
+  margin-top: 0px; }
+
+#search .node__content h2 {
+  text-align: left;
+  max-width: 100%;
+  margin: 0 0 10px;
+  font-size: 36px;
+  line-height: 42px;
+  color: #1C2229;
+  padding: 0px; }
+  #search .node__content h2 a {
+    color: #1C2229; }
+
+#search .node__content .statistics_node {
+  display: none; }
+
+#search .node__content .field__label {
+  display: inline;
+  font-weight: 700;
+  margin-right: 10px; }
+
+#search .node__content .field__item {
+  display: inline; }
+
+#search .node__content .field__items {
+  display: inline; }
+
+#search .node__content a {
+  color: #212121; }
+
+#search .node__content .field.field--label-inline {
+  display: inline; }
+
+#search .node__content .field.field--label-inline::after {
+  content: '/'; }
+
+#search img {
+  margin-bottom: -10px; }
+
+#search article:not(.no-effect-img):hover picture img {
+  transform: scale(1.2);
+  opacity: .8; }
+
+#search .field--name-field-overview-image {
+  position: relative;
+  overflow: hidden;
+  display: block !important; }
+
+#search article.node.node--type-article.node--view-mode-search-result::before {
+  content: '';
+  border-top: solid 2px #989898;
+  padding: 0px 50px;
+  margin-left: 15px; }
+
+#search figure, #search picture {
+  display: inline-block;
+  overflow: hidden; }
+
+#contact-form input:not([type]):focus:not([readonly]),
+#contact-form input[type=text]:focus:not([readonly]),
+#contact-form input[type=password]:focus:not([readonly]),
+#contact-form input[type=email]:focus:not([readonly]),
+#contact-form input[type=url]:focus:not([readonly]),
+#contact-form input[type=time]:focus:not([readonly]),
+#contact-form input[type=date]:focus:not([readonly]),
+#contact-form input[type=datetime]:focus:not([readonly]),
+#contact-form input[type=datetime-local]:focus:not([readonly]),
+#contact-form input[type=tel]:focus:not([readonly]),
+#contact-form input[type=number]:focus:not([readonly]),
+#contact-form input[type=search]:focus:not([readonly]),
+#contact-form textarea.materialize-textarea:focus:not([readonly]) {
+  border: 1px solid #d2d1d1 !important;
+  box-shadow: none !important; }
+
+#contact-form input:not([type]):not([readonly]),
+#contact-form input[type=text]:not([readonly]),
+#contact-form input[type=password]:not([readonly]),
+#contact-form input[type=email]:not([readonly]),
+#contact-form input[type=url]:not([readonly]),
+#contact-form input[type=time]:not([readonly]),
+#contact-form input[type=date]:not([readonly]),
+#contact-form input[type=datetime]:not([readonly]),
+#contact-form input[type=datetime-local]:not([readonly]),
+#contact-form input[type=tel]:not([readonly]),
+#contact-form input[type=number]:not([readonly]),
+#contact-form input[type=search]:not([readonly]),
+#contact-form textarea.materialize-textarea:not([readonly]) {
+  border: 1px solid #d2d1d1 !important;
+  padding: 5px 15px;
+  background: #f6f8f9;
+  width: 100%;
+  box-sizing: border-box; }
+
 /* Fonts Face */
 @font-face {
   font-family: 'karla-bold';
@@ -914,38 +1047,3 @@ nav:not(.primary-nav) {
 section .row .col.m6.s12,
 section .row .col.s12 {
   margin-bottom: 60px; }
-
-#contact-form input:not([type]):focus:not([readonly]),
-#contact-form input[type=text]:focus:not([readonly]),
-#contact-form input[type=password]:focus:not([readonly]),
-#contact-form input[type=email]:focus:not([readonly]),
-#contact-form input[type=url]:focus:not([readonly]),
-#contact-form input[type=time]:focus:not([readonly]),
-#contact-form input[type=date]:focus:not([readonly]),
-#contact-form input[type=datetime]:focus:not([readonly]),
-#contact-form input[type=datetime-local]:focus:not([readonly]),
-#contact-form input[type=tel]:focus:not([readonly]),
-#contact-form input[type=number]:focus:not([readonly]),
-#contact-form input[type=search]:focus:not([readonly]),
-#contact-form textarea.materialize-textarea:focus:not([readonly]) {
-  border: 1px solid #d2d1d1 !important;
-  box-shadow: none !important; }
-
-#contact-form input:not([type]):not([readonly]),
-#contact-form input[type=text]:not([readonly]),
-#contact-form input[type=password]:not([readonly]),
-#contact-form input[type=email]:not([readonly]),
-#contact-form input[type=url]:not([readonly]),
-#contact-form input[type=time]:not([readonly]),
-#contact-form input[type=date]:not([readonly]),
-#contact-form input[type=datetime]:not([readonly]),
-#contact-form input[type=datetime-local]:not([readonly]),
-#contact-form input[type=tel]:not([readonly]),
-#contact-form input[type=number]:not([readonly]),
-#contact-form input[type=search]:not([readonly]),
-#contact-form textarea.materialize-textarea:not([readonly]) {
-  border: 1px solid #d2d1d1 !important;
-  padding: 5px 15px;
-  background: #f6f8f9;
-  width: 100%;
-  box-sizing: border-box; }

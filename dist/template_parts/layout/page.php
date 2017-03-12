@@ -3,7 +3,7 @@
 # @Date:   20-02-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 11-03-2017
+# @Last modified time: 12-03-2017
 # @===================================
 #
 # @Templates SCSS file -> ./dev/src/sass/layout/pages.scss
@@ -48,6 +48,24 @@ if(isset($_GET['page'])) {
     // ------------------------------------- article detail
     // ------------------------------------- user detail
     // ------------------------------------- people
+    case 'search':
+    ?>
+      <section id="search">
+        <div class="row">
+          <?php require './template_parts/elements/blocks/header-search.php';?>
+        </div>
+        <div class="row">
+          <?php require './template_parts/elements/blocks/count-search.php';?>
+          <?php require './template_parts/elements/blocks/large-search.php';?>
+          <?php require './template_parts/elements/blocks/large-search.php';?>
+          <?php require './template_parts/elements/blocks/large-search.php';?>
+          <?php require './template_parts/elements/blocks/large-search.php';?>
+          <?php require './template_parts/elements/blocks/large-search.php';?>
+        </div>
+      </section>
+    <?php
+    break;
+
     case 'people':
     ?>
     <section>
