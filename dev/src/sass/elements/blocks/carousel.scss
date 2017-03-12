@@ -2,7 +2,7 @@
 // @Date:   11-03-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 11-03-2017
+// @Last modified time: 12-03-2017
 
 // slider
 .carousel.carousel-slider {
@@ -29,7 +29,8 @@ button i.material-icons {
     border-radius: 100%;
     line-height: 54px;
 }
-#slick-block-content-1-header-images-default-1 {
+#slick-block-content-1-header-images-default-1,
+div.custom-slider {
     position: relative;
 }
 button.slick-next, button.slick-prev  {

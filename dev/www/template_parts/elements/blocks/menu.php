@@ -3,7 +3,7 @@
 # @Date:   20-02-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 01-03-2017
+# @Last modified time: 12-03-2017
 # @===================================
 #
 # @Templates SCSS file -> ./dev/src/sass/navigation/menu.scss
@@ -11,7 +11,7 @@
 
 <!-- BEGIN OUTPUT from 'themes/urbz/templates/menu.html.twig' -->
 <ul id="nav-mobile" class="nav-content ">
-  <li><a href="?page=collection_overview" data-drupal-link-system-path="taxonomy/term/12">Exhibitions</a></li>
+  <li><a href="?page=accueil" data-drupal-link-system-path="taxonomy/term/12">Exhibitions</a></li>
   <li><a href="?page=people" data-drupal-link-system-path="people">People</a></li>
   <li><a href="?page=collection_overview" data-drupal-link-system-path="taxonomy/term/11">Projects</a></li>
   <li><a href="?page=collection_overview" data-drupal-link-system-path="taxonomy/term/69">Publications</a></li>
