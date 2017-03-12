@@ -999,6 +999,61 @@ button.slick-prev {
   width: 100%;
   box-sizing: border-box; }
 
+.s12 > article.medium-article-post {
+  overflow: hidden;
+  text-align: center;
+  margin: 0 0px 0px 0px;
+  background: transparent; }
+  .s12 > article.medium-article-post .field.field--name-field-overview-image.field--type-image.field--label-hidden.field__item {
+    overflow: hidden; }
+  .s12 > article.medium-article-post h2 {
+    margin: 0;
+    padding: 0 20px; }
+  .s12 > article.medium-article-post h2 a .field.field--name-title.field--type-string.field--label-hidden {
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto 10px;
+    font-size: 36px;
+    line-height: 42px;
+    color: #1C2229;
+    padding: 0px; }
+  .s12 > article.medium-article-post .content-card {
+    padding: 0 20px;
+    text-align: left; }
+    .s12 > article.medium-article-post .content-card time.datetime {
+      text-align: left; }
+    .s12 > article.medium-article-post .content-card h2 {
+      padding: 0px; }
+  .s12 > article.medium-article-post .card-image {
+    max-width: 60%; }
+    .s12 > article.medium-article-post .card-image img.responsive-img {
+      max-height: 100%;
+      width: auto;
+      max-width: none; }
+
+@media screen and (max-width: 600px) {
+  .s12 > article.medium-article-post {
+    margin: 0px -10px 50px; } }
+
+.m6 > article.medium-article-post {
+  overflow: hidden;
+  text-align: left;
+  margin-bottom: 40px;
+  background: transparent; }
+  .m6 > article.medium-article-post .field.field--name-field-overview-image.field--type-image.field--label-hidden.field__item {
+    overflow: hidden; }
+  .m6 > article.medium-article-post h2 {
+    margin: 0;
+    font-size: 20px;
+    margin-top: 10px; }
+  .m6 > article.medium-article-post h2 a .field.field--name-title.field--type-string.field--label-hidden {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px;
+    margin-bottom: 20px;
+    color: #1C2229; }
+
 /* Fonts Face */
 @font-face {
   font-family: 'karla-bold';
