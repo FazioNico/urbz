@@ -42,20 +42,52 @@
   }
   .card-image {
     max-width: 60%;
-     img.responsive-img {
-       max-height: 100%;
-       width: auto;
-       max-width: none;
-     }
+
   }
 }
+
 @media screen and (max-width: 600px) {
 
   .s12 > article.medium-article-post {
     margin:0px -10px 50px;
   }
+  .s12 > article.medium-article-post .card-image {
+    max-width: 100%;
+  }
+  article.medium-article-post img.responsive-img {
+     max-height: 100%;
+     width: auto;
+     max-width: none;
+  }
+  .card-stacked {
+      display: block;
+      position: relative;
+      width: 100%;
+      margin: 0px;
+  }
+
+  .card.horizontal .card-stacked {
+      display: block!important;
+      width: 100%;
+  }
+
+  article.card.horizontal.medium-article-post.z-depth-0.node.node--type-article.node--view-mode-overview-small {
+      display: block;
+  }
 }
 
+@media screen and (min-width: 601px) {
+  .s12 > article.medium-article-post {
+    .card-image {
+      max-width: 60%;
+       img.responsive-img {
+         max-height: 100%;
+         width: auto;
+         max-width: none;
+       }
+    }
+  }
+}
 
 
 .m6 > article.medium-article-post {
