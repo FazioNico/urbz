@@ -3,7 +3,7 @@
 * @Date:   20-02-2017
 * @Email:  contact@nicolasfazio.ch
 * @Last modified by:   webmaster-fazio
-* @Last modified time: 11-03-2017
+* @Last modified time: 12-03-2017
 */
 console.log('test');
 
@@ -47,13 +47,20 @@ function navShowOnScroll(){
 			}
 	});
 }
-// open modal IMG box shadow on click .triggerModalIMG button
-function openPictureModal(){
+// Emule event click with triggerClick()
+function triggerClick(){
+  // open modal IMG box shadow on click .triggerModalIMG button
   $('.triggerModalIMG').on('click',function(e){
     // select img of the trigger button
     //console.log($(e.target).parent().find('img'));
     var img = $(e.target).parent().find('img');
     img.trigger( "click" );
+  })
+
+  $('.block-views-exposed-filter-blocksearch-page-1 .input-field .prefix').on('click',function(e){
+
+    console.log($('#edit-submit-search'));
+    $('#edit-submit-search').trigger( "click" );
   })
 }
 
@@ -66,6 +73,6 @@ navShowOnScroll()
 $(document).ready(function() {
   // dropdown input select form
   $('select').material_select();
-  openPictureModal()
+  triggerClick()
   $('.carousel.carousel-slider').carousel({fullWidth: true});
 });
