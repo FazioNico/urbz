@@ -1,0 +1,56 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   11-03-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 12-03-2017
+
+// slider
+.carousel.carousel-slider {
+    min-height: 213px;
+    height: auto;
+    margin-bottom: 50px;
+
+    .carousel-item {
+      min-height: 213px;
+    }
+    .slide__constrained {
+      display: none;
+    }
+    @media screen and (min-width: 601px) {
+      min-height: 400px;
+
+      .carousel-item {
+        min-height: 400px;
+      }
+    }
+}
+button i.material-icons {
+    border: solid 2px #fff;
+    border-radius: 100%;
+    line-height: 54px;
+}
+#slick-block-content-1-header-images-default-1,
+div.custom-slider {
+    position: relative;
+}
+button.slick-next, button.slick-prev  {
+    position: absolute;
+    top: 0;
+    width: 70px;
+    height: 100%;
+    color: #fff;
+    background: transparent;
+    border: 0px solid transparent;
+
+    @media screen and (max-width: 600px) {
+      i.material-icons {
+        border: solid 0px #fff;
+      }
+    }
+}
+button.slick-next {
+  right: 0;
+}
+button.slick-prev {
+    left: 0;
+}

@@ -2,7 +2,7 @@
 // @Date:   25-02-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 02-03-2017
+// @Last modified time: 12-03-2017
 
 article.card:not(.no-effect-img):hover picture img {
     -webkit-transform: scale(1.2);
@@ -14,9 +14,11 @@ article.card:not(.no-effect-img):hover picture img {
 
 
 }
-
+article.card  .field--name-field-overview-image.field--type-image picture{
+  position: relative;
+}
 .img-element {
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
 }
 img.responsive-img, video.responsive-video {
     margin: auto;
@@ -37,5 +39,13 @@ picture {
   opacity: 0.7;
 }
 .triggerModalIMG:hover img {
+  opacity: 0.8;
+}
+
+figure {
+  margin: 0px;
+  position: relative;
+}
+figure:hover img{
   opacity: 0.8;
 }

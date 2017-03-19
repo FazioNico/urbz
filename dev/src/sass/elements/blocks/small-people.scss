@@ -1,0 +1,47 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   10-03-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 10-03-2017
+
+
+// People
+.item-list--blazy.item-list--blazy-column.item-list {
+  padding: 0px 20px 0px 15px;
+}
+li.col .grid__content {
+  margin-top:20px;
+  margin-bottom:50px;
+  min-height: 200px;
+
+  .field.field--name-field-user-picture {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    border-bottom: 4px solid #727C9B;
+
+    picture {
+      margin-bottom: -8px;
+      width: 75%;
+    }
+  }
+
+  .field.field--name-field-team-category{
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #989898;
+      margin: 2px 0px 5px;
+  }
+  .field.field--name-field-first-name,
+  .field.field--name-field-family-name {
+      display: inline;
+      text-align: left;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 25px;
+      margin-bottom: 10px;
+      color: #1C2229;
+  }
+}

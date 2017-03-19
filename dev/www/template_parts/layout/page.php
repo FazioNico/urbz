@@ -3,7 +3,7 @@
 # @Date:   20-02-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 02-03-2017
+# @Last modified time: 12-03-2017
 # @===================================
 #
 # @Templates SCSS file -> ./dev/src/sass/layout/pages.scss
@@ -48,8 +48,78 @@ if(isset($_GET['page'])) {
     // ------------------------------------- article detail
     // ------------------------------------- user detail
     // ------------------------------------- people
+    case 'search':
+    ?>
+      <section id="search">
+        <div class="row">
+          <?php require './template_parts/elements/blocks/header-search.php';?>
+        </div>
+        <div class="row">
+          <?php require './template_parts/elements/blocks/count-search.php';?>
+          <?php require './template_parts/elements/blocks/large-search.php';?>
+          <?php require './template_parts/elements/blocks/large-search.php';?>
+          <?php require './template_parts/elements/blocks/large-search.php';?>
+          <?php require './template_parts/elements/blocks/large-search.php';?>
+          <?php require './template_parts/elements/blocks/large-search.php';?>
+        </div>
+      </section>
+    <?php
+    break;
+
     case 'people':
+    ?>
+    <section>
+      <div class="row">
+        <?php require './template_parts/elements/blocks/header-people.php';?>
+      </div>
+      <div class="row">
+        <!--  grid of people -->
+        <div class="item-list--blazy item-list--blazy-column item-list">
+          <ul class="blazy blazy--grid block-column block-count-55 small-block-column-1 medium-block-column-2 large-block-column-4 blazy--on" data-blazy="&quot;&quot;">
+            <?php require './template_parts/elements/blocks/small-people.php';?>
+            <?php require './template_parts/elements/blocks/small-people.php';?>
+            <?php require './template_parts/elements/blocks/small-people.php';?>
+            <?php require './template_parts/elements/blocks/small-people.php';?>
+            <?php require './template_parts/elements/blocks/small-people.php';?>
+            <?php require './template_parts/elements/blocks/small-people.php';?>
+            <?php require './template_parts/elements/blocks/small-people.php';?>
+            <?php require './template_parts/elements/blocks/small-people.php';?>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <?php
+    break;
+
     case 'user':
+    ?>
+    <section id="people-detail">
+      <div class="row">
+
+        <?php require './template_parts/elements/blocks/header-poeple_detail.php';?>
+
+        <div class="col s12 m6">
+          <?php require './template_parts/elements/blocks/img-legende.php';?>
+        </div>
+        <div class="col s12 m6">
+          <?php require './template_parts/elements/blocks/simple-text.php';?>
+          <?php require './template_parts/elements/blocks/google-map.php';?>
+        </div>
+
+
+      </div>
+    </section>
+    <section id="related-footer" class="row">
+      <h2>Related projects</h2>
+      <?php require './template_parts/elements/blocks/related-footer.php';?>
+      <?php require './template_parts/elements/blocks/related-footer.php';?>
+      <?php require './template_parts/elements/blocks/related-footer.php';?>
+      <?php require './template_parts/elements/blocks/related-footer.php';?>
+
+    </section>
+    <?php
+    break;
+
     case 'article':
     case 'about':
     case 'search':
@@ -62,9 +132,13 @@ if(isset($_GET['page'])) {
         if($include_page == 'collection') {
           require './template_parts/elements/blocks/full-collection.php';
         }
-        elseif ($include_page == 'article') {
+        elseif ($include_page == 'search') {
+          // TODO
+        }
+        else {
           require './template_parts/elements/blocks/full-article.php';
         }
+
         ?>
       </div>
       <div class="row">
@@ -86,14 +160,32 @@ if(isset($_GET['page'])) {
 
     <div id="related" class="row">
         <section class="col m6">
-          <h2>Articles of this project</h2>
-          <?php require './template_parts/elements/blocks/small-article-post.php';?>
-          <?php require './template_parts/elements/blocks/small-article-post.php';?>
-          <?php require './template_parts/elements/blocks/small-article-post.php';?>
+          <?php if($include_page == 'about') { ?>
+            <h2>Drop us a line</h2>
+            <?php require './template_parts/elements/blocks/simple-text.php';?>
+          <?php } else {?>
+            <h2>Articles of this project</h2>
+            <?php require './template_parts/elements/blocks/small-article-post.php';?>
+            <?php require './template_parts/elements/blocks/small-article-post.php';?>
+            <?php require './template_parts/elements/blocks/small-article-post.php';?>
+          <?php } ?>
         </section>
         <section class="col m6">
-          <h2>Information</h2>
-          <?php require './template_parts/elements/blocks/simple-text.php';?>
+          <?php if($include_page == 'about') { ?>
+            <?php require './template_parts/elements/blocks/contact-form.php';?>
+          <?php } else {?>
+            <h2>Information</h2>
+            <div id="inline_fields" class="col s12 ">
+              <?php require './template_parts/elements/fields/label-date_creation.php';?>
+              <?php require './template_parts/elements/fields/label-location.php';?>
+              <?php require './template_parts/elements/fields/label-authors.php';?>
+              <?php require './template_parts/elements/fields/label-people.php';?>
+              <?php require './template_parts/elements/fields/label-topic.php';?>
+              <?php require './template_parts/elements/fields/label-tags.php';?>
+            </div>
+          <?php } ?>
+
+          <?php //require './template_parts/elements/blocks/simple-text.php';?>
         </section>
     </div>
 
@@ -117,7 +209,7 @@ if(isset($_GET['page'])) {
       <!-- Main col Left Block -->
       <section class="col m5">
         <?php
-          if($include_page == 'collection-overview') {
+          if($include_page == 'accueil') {
             require_once './template_parts/elements/blocks/accueil-teaser.php';
           } else {
             require_once './template_parts/elements/blocks/workshop.php';

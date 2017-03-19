@@ -2,14 +2,14 @@
 // @Date:   02-03-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 02-03-2017
+// @Last modified time: 11-03-2017
 
 #related, #related-footer {
   padding-top:40px;
   padding-bottom:40px;
   margin-bottom: -10px;
 
-  .col h1,.col h2 {
+  .col h1,.col > h2{
     padding-bottom: 30px;
     margin: 0;
     font-size: 30px;
@@ -25,6 +25,31 @@
     padding-left: 10px;
   }
 }
+// information fields item & label
+#related {
+  .s12 time.datetime {
+    text-align: left;
+    display: inline;
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
+  }
+  #inline_fields .field__label {
+        display: inline;
+        font-weight: 700;
+        margin-right: 10px;
+  }
+  #inline_fields .field__item {
+        display: inline;
+  }
+  #inline_fields .field__items {
+      display: inline;
+  }
+  #inline_fields a {
+    color: #212121;
+  }
+}
+
 #related-footer{
   background: #EEF6FB;
   padding:60px 30px 40px 20px;
