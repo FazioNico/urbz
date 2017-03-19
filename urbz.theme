@@ -211,3 +211,14 @@ function urbz_preprocess_page(&$variables) {
     }
   }
 }
+
+/**
+ * Implements TEMPLATE_preprocess_HOOK().
+ * - add page title to block variable
+ **/
+function urbz_preprocess_block(&$variables) {
+  $request = \Drupal::request();
+  if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
+    $variables['page_title'] = \Drupal::service('title_resolver')->getTitle($request, $route);
+  }
+}

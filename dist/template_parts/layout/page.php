@@ -118,9 +118,9 @@ if(isset($_GET['page'])) {
       <section class="col m5">
         <?php
           if($include_page == 'collection-overview') {
-            require_once './template_parts/elements/blocks/accueil-teaser.php';
-          } else {
             require_once './template_parts/elements/blocks/workshop.php';
+          } else {
+            require_once './template_parts/elements/blocks/accueil-teaser.php';
           }
         ?>
         <?php require './template_parts/elements/blocks/small-collection.php';?>
