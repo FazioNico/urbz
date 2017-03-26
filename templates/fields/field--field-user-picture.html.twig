@@ -51,25 +51,30 @@
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
-{%
-  set found = false
-%}
-{% for item in items %}
-  {% if item.content['#found'] == true %}
-    {% set found = true %}
+
+{% if label_hidden %}
+  {% if multiple %}
+    <div{{ attributes.addClass(classes, 'field__items') }}>
+      {% for item in items %}
+        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+      {% endfor %}
+    </div>
+  {% else %}
+    {% for item in items %}
+      <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
+    {% endfor %}
   {% endif %}
-{% endfor %}
-<div{{ attributes.addClass(classes, 'field__items', 'field-social-link') }}>
-  {% for item in items %}
-    {% if item.content['#found'] == false %}
-      {{ link(item.content['#url'].uri, item.content['#url'].uri) }}
+{% else %}
+  <div{{ attributes.addClass(classes) }}>
+    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+    {% if multiple %}
+      <div class="field__items">
     {% endif %}
-  {% endfor %}
-</div>
-<div{{ attributes.removeClass('field-social-link').addClass(classes, 'field__items', 'field-social-image') }}>
-  {% for item in items %}
-    {% if item.content['#found'] %}
+    {% for item in items %}
       <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+    {% endfor %}
+    {% if multiple %}
+      </div>
     {% endif %}
-  {% endfor %}
-</div>
+  </div>
+{% endif %}

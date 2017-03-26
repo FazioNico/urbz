@@ -70,25 +70,26 @@
  *   in different view modes.
  */
 #}
-<div class="row">
-  <div class="col s12">
-    <article about="" class="card small-article-exhibition z-depth-0 node node--type-project node--view-mode-teaser">
-      <header>
-        <a href="{{ url }}">
-          {{ content.field_header_image }}
-        </a>
-        <h2 class="title">
-          <a href="{{ url }}" {{ link_attributes }} rel="bookmark">{{ label }}</a>
-        </h2>
-      </header>
-      <div class="card-content">
-        {{ content.field_category }}
-        {{ content.field_description }}
-      </div>
-      <div class="card-action">
-        <a href="{{ url }}" class="grey-text text-lighten-1">more</a>
-      </div>
-
-    </article>
-  </div>
+{% 
+  set classes = [
+    'card',
+    'z-depth-0',
+    'small-pdf-post',
+    'no-effect-img',
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ] 
+%}
+{% if not content.field_overview_image %}
+  {% set classes = classes|merge(['colored-article-post', 'colored-tile']) %}
+{% endif %}
+{{ attach_library('classy/node') }}
+<div class="col m6">
+  <article{{ attributes.addClass(classes) }}>
+      {{ content }}
+  </article>
 </div>

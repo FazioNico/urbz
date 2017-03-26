@@ -83,6 +83,7 @@ function urbz_preprocess_node(&$variables) {
         $variables['link_attributes'] = new Drupal\Core\Template\Attribute(array('target' => '_blank'));
       }
   }
+  
   if(isset($variables['content']['field_background_color'])) {
     if(isset($variables['content']['field_overview_image'])) {
       if(count($variables['content']['field_overview_image']) < 3 &&
@@ -93,6 +94,7 @@ function urbz_preprocess_node(&$variables) {
         unset($variables['content']['field_date_of_creation']);
         unset($variables['content']['field_description_article']);
         unset($variables['content']['field_authors']);
+        unset($variables['content']['authors']);
       }
       unset($variables['content']['field_background_color']);
     }

@@ -8641,7 +8641,7 @@ body > main.row {
   margin-right: 0px;
 }
 
-main section.col.m7 > .col:first-of-type {
+main section.col.m7 .col:first-of-type {
   margin-top: 60px;
 }
 
@@ -8650,13 +8650,13 @@ main section.col.m5 .col:first-of-type {
   margin-bottom: 0px;
 }
 
-main section.col.m7 > .col {
+main section.col.m7 .col {
   margin-top: 60px;
   padding: 0 20px 0 20px;
 }
 
 @media screen and (min-width: 601px) {
-  .col.m7 > .col {
+  .col.m7 .col {
     margin-top: 60px;
     padding: 0 40px 0 30px;
   }
@@ -9178,7 +9178,7 @@ article.card.colored-article-post:hover {
   padding: 0 20px;
 }
 
-.s12 > article.large-article-post h2 a .field.field--name-title.field--type-string.field--label-hidden {
+.s12 > article.large-article-post h2 .field.field--name-title.field--type-string.field--label-hidden a {
   text-align: center;
   max-width: 80%;
   margin: 0 auto 10px;
@@ -9215,7 +9215,7 @@ article.card.colored-article-post:hover {
   margin-top: 10px;
 }
 
-.m6 > article.large-article-post h2 a .field.field--name-title.field--type-string.field--label-hidden {
+.m6 > article.large-article-post h2 .field.field--name-title.field--type-string.field--label-hidden a {
   text-align: left;
   font-size: 20px;
   font-weight: 500;
@@ -9942,23 +9942,23 @@ button.slick-prev {
   box-sizing: border-box;
 }
 
-.s12 > article.medium-article-post {
+.s12 article.medium-article-post {
   overflow: hidden;
   text-align: center;
   margin: 0 0px 0px 0px;
   background: transparent;
 }
 
-.s12 > article.medium-article-post .field.field--name-field-overview-image.field--type-image.field--label-hidden.field__item {
+.s12 article.medium-article-post .field.field--name-field-overview-image.field--type-image.field--label-hidden.field__item {
   overflow: hidden;
 }
 
-.s12 > article.medium-article-post h2 {
+.s12 article.medium-article-post h2 {
   margin: 0;
   padding: 0 20px;
 }
 
-.s12 > article.medium-article-post h2 a .field.field--name-title.field--type-string.field--label-hidden {
+.s12 article.medium-article-post h2 .field.field--name-title.field--type-string.field--label-hidden a {
   text-align: center;
   max-width: 80%;
   margin: 0 auto 10px;
@@ -9968,29 +9968,29 @@ button.slick-prev {
   padding: 0px;
 }
 
-.s12 > article.medium-article-post .content-card {
+.s12 article.medium-article-post .content-card {
   padding: 0 20px;
   text-align: left;
 }
 
-.s12 > article.medium-article-post .content-card time.datetime {
+.s12 article.medium-article-post .content-card time.datetime {
   text-align: left;
 }
 
-.s12 > article.medium-article-post .content-card h2 {
+.s12 article.medium-article-post .content-card h2 {
   padding: 0px;
 }
 
-.s12 > article.medium-article-post .card-image {
+.s12 article.medium-article-post .card-image {
   max-width: 60%;
 }
 
 @media screen and (max-width: 600px) {
-  .s12 > article.medium-article-post {
+  .s12 article.medium-article-post {
     margin: 0px -10px 50px;
   }
 
-  .s12 > article.medium-article-post .card-image {
+  .s12 article.medium-article-post .card-image {
     max-width: 100%;
   }
 
@@ -10018,11 +10018,11 @@ button.slick-prev {
 }
 
 @media screen and (min-width: 601px) {
-  .s12 > article.medium-article-post .card-image {
+  .s12 article.medium-article-post .card-image {
     max-width: 60%;
   }
 
-  .s12 > article.medium-article-post .card-image img.responsive-img {
+  .s12 article.medium-article-post .card-image img.responsive-img {
     max-height: 100%;
     width: auto;
     max-width: none;
@@ -10036,17 +10036,17 @@ button.slick-prev {
   background: transparent;
 }
 
-.m6 > article.medium-article-post .field.field--name-field-overview-image.field--type-image.field--label-hidden.field__item {
+.m6 article.medium-article-post .field.field--name-field-overview-image.field--type-image.field--label-hidden.field__item {
   overflow: hidden;
 }
 
-.m6 > article.medium-article-post h2 {
+.m6 article.medium-article-post h2 {
   margin: 0;
   font-size: 20px;
   margin-top: 10px;
 }
 
-.m6 > article.medium-article-post h2 a .field.field--name-title.field--type-string.field--label-hidden {
+.m6 article.medium-article-post h2 a .field.field--name-title.field--type-string.field--label-hidden {
   text-align: left;
   font-size: 20px;
   font-weight: 500;

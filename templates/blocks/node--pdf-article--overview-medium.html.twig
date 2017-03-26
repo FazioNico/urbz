@@ -70,26 +70,33 @@
  *   in different view modes.
  */
 #}
-{%
+{% 
   set classes = [
-    'large-article-post',
+    'card',
+    'z-depth-0',
+    'medium-pdf-post',
+    'no-effect-img',
+    'horizontal',
     'node',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  ]
+  ] 
 %}
+{% if not content.field_overview_image %}
+  {% set classes = classes|merge(['colored-article-post', 'colored-tile']) %}
+{% endif %}
 {{ attach_library('classy/node') }}
-<div class="row">
-  <div class="col s12">
-    <article{{ attributes.addClass(classes) }}>
-
-      <div{{ content_attributes.addClass('node__content') }}>
-        {{ content }}
-      </div>
-
-    </article>
-  </div>
+<div class="col s12">
+  <article{{ attributes.addClass(classes) }}>
+    {{ content.field_overview_image }}
+    <div class="card-stacked content-card">
+      {{ content.field_date_of_creation }}
+      {{ content.title_clone }}
+      {{ content.field_description_article }}
+      {{ content.field_authors }}
+    </div>
+  </article>
 </div>
