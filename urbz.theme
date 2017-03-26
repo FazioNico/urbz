@@ -103,7 +103,7 @@ function urbz_preprocess_node(&$variables) {
 
 /*
  * Implements TEMPLATE_preprocess_HOOK().
- * - display only one picture of header imùage if it is not full page
+ * - display only one picture of header image if it is not full page
  * - display author picture if the checkbox is checked
  */
 function urbz_preprocess_field(&$variables) {

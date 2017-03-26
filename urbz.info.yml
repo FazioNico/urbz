@@ -15,10 +15,6 @@ libraries:
  - urbz/global-styling
  - urbz/global-js-footer
 
-
-ckeditor_stylesheets:
-  - dist/css/ckeditor.css
-
 libraries-override:
   classy/base: false
   classy/node: false
