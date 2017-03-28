@@ -53,35 +53,32 @@
   </div>
 </nav>
 
-<main class="main-content home">
-  {% if not (page.content_left is empty) %}
+<main class="main-content row">
+  
+  {% if page.content_left is empty %}
+    
+    {{ page.content }}
+    
+  {% else %}
+    
+    <!-- Main col Left Block -->
     <section class="col m5">
       {{ page.content_left }}
     </section>
+    
+     <!-- Main col right Block -->
     <section class="col m7">
       {{ page.content }}
     </section>
-  {% else %}
-    <div class="row">
-      <section class="col s12">
-        <!-- TODO -->
-      </section>
-    </div>
-    <div class="row">
-      <!-- TODO -->
-    </div>
-    <div class="row">
-      <!-- TODO -->
-    </div>
+    
   {% endif %}
-  
 </main>
 
 <!-- Aside Panel Block -->
-<div class="side-panel">
+<aside class="side-panel">
 	<div class="panel-header"><span class="title">Meanwhile</span></div>
 	<div class="panel-container">
 		<div id="feed" class="region-feed">
     </div>
   </div>
-</div>
+</aside>

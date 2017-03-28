@@ -70,25 +70,25 @@
  *   in different view modes.
  */
 #}
-{% 
+{%
   set classes = [
-    'card',
-    'z-depth-0',
-    'large-article-post',
+    'slider-home',
     'node',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  ] 
+  ]
 %}
-{% if not content.field_overview_image %}
-  {% set classes = classes|merge(['colored-article-post', 'colored-tile']) %}
-{% endif %}
 {{ attach_library('classy/node') }}
-<div class="col m6">
-  <article{{ attributes.addClass(classes) }}>
-      {{ content }}
-  </article>
-</div>
+<article{{ attributes.addClass(classes) }}>
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content }}
+  </div>
+  <div class="title-slider-home">
+    <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+  </div>
+
+</article>

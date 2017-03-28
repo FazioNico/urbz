@@ -74,7 +74,8 @@
   set classes = [
     'card',
     'z-depth-0',
-    'large-article-post',
+    'small-pdf-post',
+    'no-effect-img',
     'node',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
@@ -87,7 +88,7 @@
   {% set classes = classes|merge(['colored-article-post', 'colored-tile']) %}
 {% endif %}
 {{ attach_library('classy/node') }}
-<div class="col m6">
+<div class="col s12">
   <article{{ attributes.addClass(classes) }}>
       {{ content }}
   </article>

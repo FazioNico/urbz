@@ -209,7 +209,7 @@ if(isset($_GET['page'])) {
       <!-- Main col Left Block -->
       <section class="col m5">
         <?php
-          if($include_page == 'accueil') {
+          if($include_page != 'collection-overview') {
             require_once './template_parts/elements/blocks/accueil-teaser.php';
           } else {
             require_once './template_parts/elements/blocks/workshop.php';

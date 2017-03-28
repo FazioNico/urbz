@@ -83,6 +83,7 @@ function urbz_preprocess_node(&$variables) {
         $variables['link_attributes'] = new Drupal\Core\Template\Attribute(array('target' => '_blank'));
       }
   }
+  
   if(isset($variables['content']['field_background_color'])) {
     if(isset($variables['content']['field_overview_image'])) {
       if(count($variables['content']['field_overview_image']) < 3 &&
@@ -93,6 +94,7 @@ function urbz_preprocess_node(&$variables) {
         unset($variables['content']['field_date_of_creation']);
         unset($variables['content']['field_description_article']);
         unset($variables['content']['field_authors']);
+        unset($variables['content']['authors']);
       }
       unset($variables['content']['field_background_color']);
     }
@@ -101,7 +103,7 @@ function urbz_preprocess_node(&$variables) {
 
 /*
  * Implements TEMPLATE_preprocess_HOOK().
- * - display only one picture of header imùage if it is not full page
+ * - display only one picture of header image if it is not full page
  * - display author picture if the checkbox is checked
  */
 function urbz_preprocess_field(&$variables) {
@@ -209,5 +211,16 @@ function urbz_preprocess_page(&$variables) {
       unset($variables['page']['content_left']['pagetitle_2']);
       unset($variables['page']['content_left']['exposedformtaxonomy_termpage_1']);
     }
+  }
+}
+
+/**
+ * Implements TEMPLATE_preprocess_HOOK().
+ * - add page title to block variable
+ **/
+function urbz_preprocess_block(&$variables) {
+  $request = \Drupal::request();
+  if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
+    $variables['page_title'] = \Drupal::service('title_resolver')->getTitle($request, $route);
   }
 }

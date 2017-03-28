@@ -33,12 +33,10 @@
     'row'
   ]
 %}
-<div{{ attributes.addClass(classes) }}>
+<div id="workshop" {{ attributes.addClass(classes) }}>
   <div class="col s12 valign-wrapper">
     <div class="valign">
-      {% if label %}
-        <h2{{ title_attributes }}>{{ label }}</h2>
-      {% endif %}
+      <h2>{{ page_title }}</h2>
       <div class="input-field col s12">
         {% block content %}
           {{ content }}
