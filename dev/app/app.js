@@ -2,11 +2,11 @@
 * @Author: Nicolas Fazio <webmaster-fazio>
 * @Date:   20-02-2017
 * @Email:  contact@nicolasfazio.ch
-* @Last modified by:   webmaster-fazio
-* @Last modified time: 12-03-2017
+ * @Last modified by:   webmaster-fazio
+ * @Last modified time: 28-03-2017
 */
 console.log('test');
-
+jQuery.noConflict()
 // Toogle Primary Menu on click
 function toggleMenu(){
   document.getElementsByClassName('primary-nav-trigger')[0].addEventListener('click',_=>{
@@ -48,19 +48,20 @@ function navShowOnScroll(){
 	});
 }
 // Emule event click with triggerClick()
+
 function triggerClick(){
   // open modal IMG box shadow on click .triggerModalIMG button
-  $('.triggerModalIMG').on('click',function(e){
+  jQuery('.triggerModalIMG').on('click',function(e){
     // select img of the trigger button
-    //console.log($(e.target).parent().find('img'));
-    var img = $(e.target).parent().find('img');
+    //console.log(jQuery(e.target).parent().find('img'));
+    var img = jQuery(e.target).parent().find('img');
     img.trigger( "click" );
   })
 
-  $('.block-views-exposed-filter-blocksearch-page-1 .input-field .prefix').on('click',function(e){
+  jQuery('.block-views-exposed-filter-blocksearch-page-1 .input-field .prefix').on('click',function(e){
 
-    console.log($('#edit-submit-search'));
-    $('#edit-submit-search').trigger( "click" );
+    console.log(jQuery('#edit-submit-search'));
+    jQuery('#edit-submit-search').trigger( "click" );
   })
 }
 
@@ -70,9 +71,9 @@ toggleSubMenu()
 navShowOnScroll()
 
 // enable all Materialize plugins
-$(document).ready(function() {
+jQuery(document).ready(function() {
   // dropdown input select form
-  $('select').material_select();
+  jQuery('select').material_select();
   triggerClick()
-  $('.carousel.carousel-slider').carousel({fullWidth: true});
+  jQuery('.carousel.carousel-slider').carousel({fullWidth: true});
 });
