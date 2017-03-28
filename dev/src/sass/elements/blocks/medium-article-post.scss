@@ -2,7 +2,7 @@
 // @Date:   12-03-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 12-03-2017
+// @Last modified time: 28-03-2017
 
 .s12 > article.medium-article-post {
   overflow: hidden;
@@ -17,8 +17,10 @@
   h2 {
     margin: 0;
     padding:0 20px;
+    line-height: 1.2rem;
   }
-  h2 a .field.field--name-title.field--type-string.field--label-hidden{
+  h2 a .field.field--name-title.field--type-string.field--label-hidden,
+  h2 .field.field--name-title.field--type-string.field--label-hidden a{
       text-align: center;
       max-width: 80%;
       margin: 0 auto 10px;

@@ -2,7 +2,7 @@
 // @Date:   25-02-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 26-02-2017
+// @Last modified time: 28-03-2017
 
 time.datetime {
     display: block;
@@ -11,6 +11,10 @@ time.datetime {
     text-transform: uppercase;
     color: #989898;
     margin: 15px 0px 5px;
+}
+.colored-article-post time.datetime {
+  color:#fff;
+  opacity: 0.8;
 }
 .s12 time.datetime {
     text-align: center;

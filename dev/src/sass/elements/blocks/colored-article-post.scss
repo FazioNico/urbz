@@ -2,16 +2,16 @@
 // @Date:   26-02-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 06-03-2017
+// @Last modified time: 28-03-2017
 
 article.card.colored-article-post {
   background: #D17B64;
-  color:#fff;
+  color:#fff!important;
 }
 article.card.colored-article-post:hover {
   background: #1C2229;
 }
-.m6 > article.colored-article-post {
+.m6 > article.colored-article-post, article.colored-article-post {
   overflow: hidden;
   text-align: left;
   margin-bottom: 0px;
@@ -29,13 +29,14 @@ article.card.colored-article-post:hover {
     font-size: 20px;
     margin-top: 10px;
   }
-  h2 a .field.field--name-title.field--type-string.field--label-hidden{
+  h2 a .field.field--name-title.field--type-string.field--label-hidden ,
+  h2 .field.field--name-title.field--type-string.field--label-hidden a{
       text-align: left;
       font-size: 20px;
       font-weight: 500;
       line-height: 25px;
       margin-bottom: 20px;
-      color: #fff;
+      color: #fff !important;
   }
 
   span.subscribe {

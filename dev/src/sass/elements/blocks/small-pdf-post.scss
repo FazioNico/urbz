@@ -2,8 +2,10 @@
 // @Date:   02-03-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 02-03-2017
-
+// @Last modified time: 28-03-2017
+article.card.medium-pdf-post {
+  background: transparent;
+}
 article.card.small-pdf-post {
   background: transparent;
   .card-image img{
@@ -18,4 +20,62 @@ article.card.small-pdf-post {
     color: #fff;
     padding: 12px 8px 8px;
   }
+  h2 a .field.field--name-title.field--type-string.field--label-hidden ,
+  h2 .field.field--name-title.field--type-string.field--label-hidden a{
+      text-align: left;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 25px;
+      margin-bottom: 20px;
+      color: #1C2229 !important;
+  }
+  h2 {
+    line-height: 1rem;
+  }
+}
+//article.colored-tile.card.large-article-post.colored-article-post,
+article.colored-tile.card.small-pdf-post {
+  .text-formatted.field--name-field-description-article{
+    a {
+      color: #fff;
+      opacity: 0.8;
+    }
+  }
+  h2 a .field.field--name-title.field--type-string.field--label-hidden ,
+  h2 .field.field--name-title.field--type-string.field--label-hidden a{
+      text-align: left;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 25px;
+      margin-bottom: 20px;
+      color: #fff !important;
+  }
+}
+
+article.card.medium-pdf-post picture img {
+  border: solid 6px #D17B64;
+}
+article.card.medium-pdf-post picture img::after {
+    content: 'PDF';
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #D17B64;
+    color: #fff;
+    padding: 12px 8px 8px;
+}
+
+article.card.colored-tile.medium-pdf-post, article.card.colored-tile.small-pdf-post,
+article.card.medium-pdf-post + img, article.card.large-pdf-post {
+    border: solid 6px #D17B64;
+}
+article.card.colored-tile.medium-pdf-post::after, article.card.colored-tile.small-pdf-post::after,
+article.card.medium-pdf-post + img::after,  article.card.large-pdf-post::after{
+  content: 'PDF';
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #D17B64;
+  color: #fff;
+  padding: 12px 8px 8px;
 }

@@ -8641,7 +8641,7 @@ body > main.row {
   margin-right: 0px;
 }
 
-main section.col.m7 > .col:first-of-type {
+main section.col.m7 .col:first-of-type {
   margin-top: 60px;
 }
 
@@ -8650,13 +8650,13 @@ main section.col.m5 .col:first-of-type {
   margin-bottom: 0px;
 }
 
-main section.col.m7 > .col {
+main section.col.m7 .col {
   margin-top: 60px;
   padding: 0 20px 0 20px;
 }
 
 @media screen and (min-width: 601px) {
-  .col.m7 > .col {
+  .col.m7 .col {
     margin-top: 60px;
     padding: 0 40px 0 30px;
   }
@@ -9116,14 +9116,15 @@ aside {
 
 article.card.colored-article-post {
   background: #D17B64;
-  color: #fff;
+  color: #fff !important;
 }
 
 article.card.colored-article-post:hover {
   background: #1C2229;
 }
 
-.m6 > article.colored-article-post {
+.m6 > article.colored-article-post,
+article.colored-article-post {
   overflow: hidden;
   text-align: left;
   margin-bottom: 0px;
@@ -9132,32 +9133,39 @@ article.card.colored-article-post:hover {
   text-align: center;
 }
 
-.m6 > article.colored-article-post .field.field--name-field-overview-image.field--type-image.field--label-hidden.field__item {
+.m6 > article.colored-article-post .field.field--name-field-overview-image.field--type-image.field--label-hidden.field__item,
+article.colored-article-post .field.field--name-field-overview-image.field--type-image.field--label-hidden.field__item {
   overflow: hidden;
 }
 
-.m6 > article.colored-article-post h2 {
+.m6 > article.colored-article-post h2,
+article.colored-article-post h2 {
   margin: 0;
   font-size: 20px;
   margin-top: 10px;
 }
 
-.m6 > article.colored-article-post h2 a .field.field--name-title.field--type-string.field--label-hidden {
+.m6 > article.colored-article-post h2 a .field.field--name-title.field--type-string.field--label-hidden,
+.m6 > article.colored-article-post h2 .field.field--name-title.field--type-string.field--label-hidden a,
+article.colored-article-post h2 a .field.field--name-title.field--type-string.field--label-hidden,
+article.colored-article-post h2 .field.field--name-title.field--type-string.field--label-hidden a {
   text-align: left;
   font-size: 20px;
   font-weight: 500;
   line-height: 25px;
   margin-bottom: 20px;
-  color: #fff;
+  color: #fff !important;
 }
 
-.m6 > article.colored-article-post span.subscribe {
+.m6 > article.colored-article-post span.subscribe,
+article.colored-article-post span.subscribe {
   display: block;
   text-align: center;
   margin: 60px auto  30px 0;
 }
 
-.m6 > article.colored-article-post span.subscribe::after {
+.m6 > article.colored-article-post span.subscribe::after,
+article.colored-article-post span.subscribe::after {
   content: 'Subscribe';
   border-bottom: solid 2px #fff;
 }
@@ -9178,7 +9186,8 @@ article.card.colored-article-post:hover {
   padding: 0 20px;
 }
 
-.s12 > article.large-article-post h2 a .field.field--name-title.field--type-string.field--label-hidden {
+.s12 > article.large-article-post h2 a .field.field--name-title.field--type-string.field--label-hidden,
+.s12 > article.large-article-post h2 .field.field--name-title.field--type-string.field--label-hidden a {
   text-align: center;
   max-width: 80%;
   margin: 0 auto 10px;
@@ -9215,7 +9224,8 @@ article.card.colored-article-post:hover {
   margin-top: 10px;
 }
 
-.m6 > article.large-article-post h2 a .field.field--name-title.field--type-string.field--label-hidden {
+.m6 > article.large-article-post h2 a .field.field--name-title.field--type-string.field--label-hidden,
+.m6 > article.large-article-post h2 .field.field--name-title.field--type-string.field--label-hidden a {
   text-align: left;
   font-size: 20px;
   font-weight: 500;
@@ -9298,6 +9308,11 @@ time.datetime {
   text-transform: uppercase;
   color: #989898;
   margin: 15px 0px 5px;
+}
+
+.colored-article-post time.datetime {
+  color: #fff;
+  opacity: 0.8;
 }
 
 .s12 time.datetime {
@@ -9458,6 +9473,10 @@ time.datetime {
   }
 }
 
+article.card.medium-pdf-post {
+  background: transparent;
+}
+
 article.card.small-pdf-post {
   background: transparent;
 }
@@ -9471,6 +9490,69 @@ article.card.small-pdf-post .card-image::after {
   position: absolute;
   top: 0;
   right: 0;
+  background: #D17B64;
+  color: #fff;
+  padding: 12px 8px 8px;
+}
+
+article.card.small-pdf-post h2 a .field.field--name-title.field--type-string.field--label-hidden,
+article.card.small-pdf-post h2 .field.field--name-title.field--type-string.field--label-hidden a {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  margin-bottom: 20px;
+  color: #1C2229 !important;
+}
+
+article.card.small-pdf-post h2 {
+  line-height: 1rem;
+}
+
+article.colored-tile.card.small-pdf-post .text-formatted.field--name-field-description-article a {
+  color: #fff;
+  opacity: 0.8;
+}
+
+article.colored-tile.card.small-pdf-post h2 a .field.field--name-title.field--type-string.field--label-hidden,
+article.colored-tile.card.small-pdf-post h2 .field.field--name-title.field--type-string.field--label-hidden a {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  margin-bottom: 20px;
+  color: #fff !important;
+}
+
+article.card.medium-pdf-post picture img {
+  border: solid 6px #D17B64;
+}
+
+article.card.medium-pdf-post picture img::after {
+  content: 'PDF';
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #D17B64;
+  color: #fff;
+  padding: 12px 8px 8px;
+}
+
+article.card.colored-tile.medium-pdf-post,
+article.card.colored-tile.small-pdf-post,
+article.card.medium-pdf-post + img,
+article.card.large-pdf-post {
+  border: solid 6px #D17B64;
+}
+
+article.card.colored-tile.medium-pdf-post::after,
+article.card.colored-tile.small-pdf-post::after,
+article.card.medium-pdf-post + img::after,
+article.card.large-pdf-post::after {
+  content: 'PDF';
+  position: absolute;
+  top: -6px;
+  right: -6px;
   background: #D17B64;
   color: #fff;
   padding: 12px 8px 8px;
@@ -9956,9 +10038,11 @@ button.slick-prev {
 .s12 > article.medium-article-post h2 {
   margin: 0;
   padding: 0 20px;
+  line-height: 1.2rem;
 }
 
-.s12 > article.medium-article-post h2 a .field.field--name-title.field--type-string.field--label-hidden {
+.s12 > article.medium-article-post h2 a .field.field--name-title.field--type-string.field--label-hidden,
+.s12 > article.medium-article-post h2 .field.field--name-title.field--type-string.field--label-hidden a {
   text-align: center;
   max-width: 80%;
   margin: 0 auto 10px;

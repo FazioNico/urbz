@@ -2,8 +2,8 @@
 * @Author: Nicolas Fazio <webmaster-fazio>
 * @Date:   15-09-2016
 * @Email:  contact@nicolasfazio.ch
-* @Last modified by:   webmaster-fazio
-* @Last modified time: 11-03-2017
+ * @Last modified by:   webmaster-fazio
+ * @Last modified time: 28-03-2017
 */
 
 // importer les modules NPM
@@ -44,7 +44,7 @@ var config = {
     desDir    : './dist' /* répértoire de destination (prod) */
 }
 var bowerDependencies = [
-  config.bowerDir + '/jquery/dist/jquery.min.js',
+  //config.bowerDir + '/jquery/dist/jquery.min.js',
   config.bowerDir + '/materialize/dist/js/materialize.min.js'
 ]
 // Default Gulp starting task

@@ -3,7 +3,7 @@
 # @Date:   02-03-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 02-03-2017
+# @Last modified time: 28-03-2017
 
 ?>
 
@@ -16,11 +16,11 @@
         </a>
 
         <h2 class="title truncate">
-          <a href="?page=collection"  rel="bookmark">
-            <span class="field field--name-title field--type-string field--label-hidden">
-            Consequatur dolore impedit eveniet necessitatibus
-            </span>
-          </a>
+          <span class="field field--name-title field--type-string field--label-hidden">
+              <a href="?page=collection"  rel="bookmark">
+                Consequatur dolore impedit eveniet necessitatibus
+              </a>
+          </span>
         </h2>
       </header>
 

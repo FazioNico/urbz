@@ -3,7 +3,7 @@
 # @Date:   27-02-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 12-03-2017
+# @Last modified time: 28-03-2017
 
 
 /*
@@ -46,11 +46,11 @@
         </div>
 
         <h2>
-          <a href="?page=article" rel="bookmark">
-              <!-- BEGIN OUTPUT from 'core/themes/classy/templates/field/field--node--title.html.twig' -->
-              <span class="field field--name-title field--type-string field--label-hidden">Sao Paulo Calling</span>
-              <!-- END OUTPUT from 'core/themes/classy/templates/field/field--node--title.html.twig' -->
-          </a>
+            <span class="field field--name-title field--type-string field--label-hidden">
+                <a href="?page=article" rel="bookmark">
+                      Sao Paulo Calling
+                </a>          
+            </span>
         </h2>
         <p>
     				Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus...

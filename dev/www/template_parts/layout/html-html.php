@@ -3,7 +3,7 @@
 # @Date:   20-02-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 26-02-2017
+# @Last modified time: 28-03-2017
 # @===================================
 #
 # @Templates SCSS file -> none
@@ -26,6 +26,7 @@ if(isset($_GET['page'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.0.min.js" charset="utf-8"></script>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
