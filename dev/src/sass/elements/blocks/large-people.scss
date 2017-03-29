@@ -2,7 +2,7 @@
 // @Date:   11-03-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 11-03-2017
+// @Last modified time: 29-03-2017
 
 
 // people detail
@@ -23,6 +23,12 @@
      margin-bottom: 0px;
      font-weight: 900;
      text-align: center;
+
+     .field.field--name-field-first-name.field--type-string.field--label-hidden.field__item,
+     .field.field--name-field-family-name.field--type-string.field--label-hidden.field__item {
+       display:inline-block;
+     }
+
  }
  #center-specialisation {
    padding-bottom: 60px;

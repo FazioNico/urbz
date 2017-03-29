@@ -2,7 +2,7 @@
 // @Date:   12-03-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 28-03-2017
+// @Last modified time: 29-03-2017
 
 .s12 > article.medium-article-post {
   overflow: hidden;
@@ -81,7 +81,7 @@
 @media screen and (min-width: 601px) {
   .s12 > article.medium-article-post {
     .card-image {
-      max-width: 60%;
+      max-width: 100%;
        img.responsive-img {
          max-height: 100%;
          width: auto;

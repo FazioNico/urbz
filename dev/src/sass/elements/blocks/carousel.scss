@@ -2,38 +2,66 @@
 // @Date:   11-03-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 12-03-2017
+// @Last modified time: 29-03-2017
 
 // slider
-.carousel.carousel-slider {
-    min-height: 213px;
-    height: auto;
-    margin-bottom: 50px;
-
-    .carousel-item {
-      min-height: 213px;
-    }
-    .slide__constrained {
-      display: none;
-    }
-    @media screen and (min-width: 601px) {
-      min-height: 400px;
-
-      .carousel-item {
-        min-height: 400px;
-      }
-    }
+#block-views-block-frontpage-block-2 {
+    margin-left: -15px;
 }
-button i.material-icons {
-    border: solid 2px #fff;
-    border-radius: 100%;
-    line-height: 54px;
+
+
+#block-views-block-frontpage-block-2 article.colored-tile h2 {
+  color:#fff;
+  padding: 110px 20px 20px 30px;
+  margin:0px;
 }
+#block-views-block-frontpage-block-2 article:not(.colored-tile) {
+  min-height:200px;
+  h2 {
+    color:#fff;
+    padding-left:25px;
+    padding-right:20px;
+    position:absolute;
+    bottom:0px
+  }
+}
+
+// .carousel.carousel-slider {
+//     min-height: 213px;
+//     height: auto;
+//     margin-bottom: 50px;
+//
+//     .carousel-item {
+//       min-height: 213px;
+//     }
+//     .slide__constrained {
+//       display: none;
+//     }
+//     @media screen and (min-width: 601px) {
+//       min-height: 400px;
+//
+//       .carousel-item {
+//         min-height: 400px;
+//       }
+//     }
+// }
+// button i.material-icons {
+//     border: solid 2px #fff;
+//     border-radius: 100%;
+//     line-height: 54px;
+// }
 #slick-block-content-1-header-images-default-1,
 div.custom-slider {
     position: relative;
 }
-button.slick-next, button.slick-prev  {
+button.slick-next,
+.slick-next,
+.slick-next:hover,
+.slick-next:focus
+button.slick-prev,
+.slick-prev,
+.slick-prev:hover,
+.slick-prev:focus, {
     position: absolute;
     top: 0;
     width: 70px;
@@ -47,6 +75,9 @@ button.slick-next, button.slick-prev  {
         border: solid 0px #fff;
       }
     }
+}
+.slick-arrow::before {
+  color:#fff;
 }
 button.slick-next {
   right: 0;

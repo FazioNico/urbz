@@ -2,10 +2,18 @@
 // @Date:   02-03-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 28-03-2017
+// @Last modified time: 29-03-2017
+
 article.card.medium-pdf-post {
   background: transparent;
+  .col.s7 {
+    padding: 0px;
+  }
+
 }
+  .card.horizontal .card-image {
+    max-width:100%!important;
+  }
 article.card.small-pdf-post {
   background: transparent;
   .card-image img{
@@ -51,15 +59,36 @@ article.colored-tile.card.small-pdf-post {
       color: #fff !important;
   }
 }
+article.card.medium-pdf-post .card-stacked.content-card {
+  padding:20px;
+  padding-top:5px;
+}
 
+article.card.medium-pdf-post time.datetime {
+    text-align: left;
+}
+article.card.medium-pdf-post h2{
+  line-height: 1rem!important;
+  margin-top: 10px;
+
+  a {
+     text-align: left;
+     font-size: 20px;
+     font-weight: 500;
+     line-height: 25px;
+     margin-bottom: 20px;
+     color: #1C2229 !important;
+
+ }
+}
 article.card.medium-pdf-post picture img {
   border: solid 6px #D17B64;
 }
-article.card.medium-pdf-post picture img::after {
+article.card.medium-pdf-post picture::after {
     content: 'PDF';
     position: absolute;
-    top: -6px;
-    right: -6px;
+    top: 0px;
+    right: 0px;
     background: #D17B64;
     color: #fff;
     padding: 12px 8px 8px;

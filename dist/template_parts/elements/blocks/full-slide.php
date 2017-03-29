@@ -3,7 +3,7 @@
 # @Date:   10-03-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 12-03-2017
+# @Last modified time: 29-03-2017
 
 ?>
 <div id="slick-block-content-1-header-images-default-1" data-blazy="" data-colorbox-gallery="" class="custom-slider slick blazy slick--skin--fullwidth slick--optionset--full-width slick--colorbox blazy--on">
