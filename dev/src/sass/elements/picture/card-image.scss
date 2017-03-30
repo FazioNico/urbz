@@ -2,7 +2,7 @@
 // @Date:   25-02-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 29-03-2017
+// @Last modified time: 30-03-2017
 img.responsive-img {
     margin: 0px!important;
 }
@@ -53,4 +53,8 @@ figure {
 }
 figure:hover img{
   opacity: 0.8;
+}
+
+.card .card-image img, .card {
+  border-radius: 0px!important;
 }

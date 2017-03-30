@@ -119,7 +119,7 @@ body > main.row {
   margin-right: 0px; }
 
 main section.col.m7 .col:first-of-type {
-  margin-top: 60px; }
+  margin-top: 53px; }
 
 main section.col.m5 .col:first-of-type {
   margin-top: 60px;
@@ -166,6 +166,10 @@ section .row .col.s12, .row section.col.m6, .row section.col.l3 {
     left: auto;
     right: auto;
     padding: 0 25px; } }
+
+@media screen and (max-width: 400px) {
+  main > section.col.m7 {
+    float: none !important; } }
 
 body nav.primary-nav {
   position: fixed;
@@ -295,6 +299,87 @@ aside {
     background: #1C2229; }
   aside.side-panel-is-open {
     width: 280px; } }
+
+.side-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background: #1C2229;
+  overflow-y: auto;
+  transition: all 0.3s ease-in-out; }
+
+.side-panel .panel-header {
+  position: fixed;
+  z-index: 2;
+  height: 100px;
+  width: 280px;
+  background: #1C2229; }
+
+.side-panel .panel-header .title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  transform: translateX(-50%) translateY(-50%);
+  color: white;
+  text-transform: uppercase; }
+
+.side-panel .panel-header.show {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); }
+
+.side-panel .panel-container {
+  padding: 100px 30px 30px;
+  width: 280px;
+  color: white;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out; }
+
+.side-panel .panel-container .tweet {
+  padding: 20px 0;
+  border-bottom: 1px solid #858888; }
+
+.side-panel .panel-container .tweet-body a {
+  color: #6A6F8C; }
+
+.side-panel .panel-container .tweet-date {
+  padding: 10px 0 0;
+  color: #858888; }
+
+.side-panel .panel-container .tweet-text {
+  margin-bottom: 8px;
+  color: #858888; }
+
+.side-panel .panel-container .tweet-media {
+  margin-top: 16px; }
+  .side-panel .panel-container .tweet-media img {
+    width: 100%; }
+
+.side-panel .panel-container .tweet-user-images {
+  width: 44px;
+  height: auto;
+  margin-bottom: 5px; }
+
+.side-panel.side-panel-is-open {
+  width: 280px; }
+
+.side-panel.side-panel-is-open .panel-container {
+  opacity: 1;
+  visibility: visible; }
+
+@media only screen and (max-width: 768px) {
+  .side-panel {
+    display: none;
+    width: 100%;
+    z-index: 3;
+    top: 90%;
+    right: 0; }
+  .side-panel.hide {
+    top: 120%; } }
 
 #workshop {
   background: #CF587F;
@@ -581,6 +666,9 @@ figure {
 
 figure:hover img {
   opacity: 0.8; }
+
+.card .card-image img, .card {
+  border-radius: 0px !important; }
 
 time.datetime {
   display: block;
