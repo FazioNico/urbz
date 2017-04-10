@@ -3,7 +3,7 @@
 # @Date:   20-02-2017
 # @Email:  contact@nicolasfazio.ch
 # @Last modified by:   webmaster-fazio
-# @Last modified time: 26-02-2017
+# @Last modified time: 10-04-2017
 # @===================================
 #
 # @Templates SCSS file -> none
@@ -27,6 +27,10 @@ if(isset($_GET['page'])) {
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- Import layout page block -->
